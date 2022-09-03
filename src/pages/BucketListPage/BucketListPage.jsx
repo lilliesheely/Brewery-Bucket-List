@@ -4,10 +4,20 @@ import BucketListForm   from '../../components/BucketListForm/BucketListForm';
 import './BucketListPage.css';
 
 export default function BucketListPage() {
-  const [breweries, setBreweries] = useState([{}]); 
+  const [breweries, setBreweries] = useState([ 
+    {
+      name: '', 
+      type: '',
+      address: '',
+      city: '',
+      state: '',
+      beenTo: false 
+    }
+  ]); 
   function addBrewery(brewery) {
     setBreweries([...breweries, brewery]);
   }
+  console.log(breweries, 'BL page')
   return (
     <>
     <section className='bucketListPage'>
@@ -16,7 +26,7 @@ export default function BucketListPage() {
         <BucketListForm addBrewery={addBrewery} />
       </div>
       <div>
-        <BucketListList /> 
+        <BucketListList breweries={breweries}/> 
       </div>
     </section>
     </>  

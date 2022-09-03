@@ -70,5 +70,5 @@ export default function BucketListForm({addBrewery}) {
             </form>
         </>
     )
+   
 }
-console.log(BucketListForm)

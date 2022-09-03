@@ -1,10 +1,9 @@
-export default function BucketListItem() {
-     return (
+export default function BucketListItem({brewery}) {
+    console.log({brewery})
+    return (
         <>
         <h3>List below</h3>
-            <li>Testing!</li>
-            <li>Testing!</li>
-            <li>Testing!</li>
+            <li>  </li>
         </>
      )
 }
