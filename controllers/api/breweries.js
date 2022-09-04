@@ -5,10 +5,11 @@ const Brewery = require('../../models/brewery');
 module.exports = {
     index, 
     create,
-    show   
+    show, 
+    // update  
   };
 
-  async function create(req, res) {
+async function create(req, res) {
     req.body.user = req.user._id; 
     const brewery = await Brewery.create(req.body); 
     res.json(brewery);
@@ -23,3 +24,8 @@ async function show(req, res) {
   const brewery = await Brewery.findOne({name: req.body.name})
   res.json(brewery); 
 }
+
+// async function update(req, res) {
+//   const brewery = await Brewery.findOne({name: req.body.name, _id: req.params.id})
+//   res.json(brewery); 
+// }

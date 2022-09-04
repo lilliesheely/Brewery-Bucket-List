@@ -6,6 +6,7 @@ import './BucketListPage.css';
 
 export default function BucketListPage() {
   const [breweries, setBreweries] = useState([]); 
+  console.log(breweries); 
   
   useEffect(function() { 
     async function getBreweries() { 
@@ -21,6 +22,15 @@ export default function BucketListPage() {
     setBreweries([...breweries, brewery]);
   }
 
+  async function visitedBrewery(index) {
+    console.log('visited brewery', index)
+    const newBreweries = await breweries.map(function(brewery, idx) {
+      if (idx === index) brewery.beenTo = true; 
+      // return brewery; 
+      console.log(brewery , 'udpdatedbrewery')
+    })
+  }
+
   return (
     <>
     <section className='bucketListPage'>
@@ -30,7 +40,7 @@ export default function BucketListPage() {
       </div>
       <div>
         <h2>Bucket List</h2>
-        <BucketListList breweries={breweries}/> 
+        <BucketListList breweries={breweries} visitedBrewery={visitedBrewery}/> 
       </div>
     </section>
     </>  

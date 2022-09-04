@@ -1,9 +1,7 @@
 import { useParams } from "react-router-dom";
 
-export default function BreweryDetailPage({brewery}){
-    console.log(brewery) 
-    const { breweryName } = useParams(); 
-    
+export default function BreweryDetailPage(){
+    const { breweryName } = useParams()
     return (
         <>
         <h1> {breweryName}</h1>
