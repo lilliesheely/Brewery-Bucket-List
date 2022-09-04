@@ -6,7 +6,7 @@ const brewerySchema = new Schema({
         type: String,
         required: true
     },
-    type: String, 
+    breweryType: String, 
     address: String,
     city: String,
     state: String,

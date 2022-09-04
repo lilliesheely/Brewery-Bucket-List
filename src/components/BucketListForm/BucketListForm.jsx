@@ -4,11 +4,11 @@ import './BucketListForm.css'
 export default function BucketListForm({ addBrewery }) { 
     const [newBrewery, setNewBrewery] = useState ({
         name: '', 
-            type: '',
-            address: '',
-            city: '',
-            state: '',
-            beenTo: false, 
+        breweryType: '',
+        address: '',
+        city: '',
+        state: '',
+        beenTo: false, 
     }) 
     function handleSubmit(evt) {
         evt.preventDefault(); 
@@ -33,7 +33,7 @@ export default function BucketListForm({ addBrewery }) {
                 <label>Type</label>
                 <input
                     name="type"
-                    value={newBrewery.type}
+                    value={newBrewery.breweryType}
                     onChange={handleChange}
                     placeholder="ie: Micro, brewpub, taproom, etc."
                     type="text"
@@ -59,7 +59,7 @@ export default function BucketListForm({ addBrewery }) {
                     value={newBrewery.state}
                     onChange={handleChange}
                 />
-            <button type="submit">ADD BREWERY</button>
+                <button type="submit">ADD BREWERY</button>
             </form>
         </>
     )

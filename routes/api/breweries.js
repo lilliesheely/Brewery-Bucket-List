@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const breweriesCtrl = require('../../controllers/api/breweries');
-const ensureLoggedIn = require('../../config/ensureLoggedIn')
 
-router.post('/', ensureLoggedIn, breweriesCtrl.create);
-router.get('/', ensureLoggedIn, breweriesCtrl.index); 
+
+router.get('/', breweriesCtrl.index); 
+router.post('/', breweriesCtrl.create);
+router.get('/:id', breweriesCtrl.show )
 
 module.exports = router;

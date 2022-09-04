@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom";
+
 export default function BucketListItem({brewery}) {
-    console.log({brewery})
     return (
         <>
-        <h3>List below</h3>
-            <li>  </li>
+        <Link 
+            to={`/${brewery.name}`} 
+            brewery={brewery}
+        >
+            <li>{brewery.name} - {brewery.city}, {brewery.state} </li>
+        </Link>
         </>
      )
 }

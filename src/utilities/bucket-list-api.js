@@ -7,5 +7,6 @@ export function getAll() {
 }
 
 export function addOne(formData) {
-    return sendRequest (`${BASE_URL}`, 'POST', formData); 
+    return sendRequest(`${BASE_URL}`, 'POST', formData); 
 }
+

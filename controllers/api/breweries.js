@@ -1,9 +1,11 @@
+const express = require('express');
 const jwt = require('jsonwebtoken');
 const Brewery = require('../../models/brewery');
 
 module.exports = {
     index, 
-    create   
+    create,
+    show   
   };
 
   async function create(req, res) {
@@ -14,5 +16,10 @@ module.exports = {
 
 async function index(req, res) {
      const breweries = await Brewery.find({ user: req.user._id})
-     res.json(breweries)
+     res.json(breweries);
+}
+
+async function show(req, res) { 
+  const brewery = await Brewery.findOne({name: req.body.name})
+  res.json(brewery); 
 }
