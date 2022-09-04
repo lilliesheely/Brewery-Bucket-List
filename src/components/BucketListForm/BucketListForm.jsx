@@ -1,7 +1,7 @@
 import { useState } from 'react'; 
 import './BucketListForm.css'
 
-export default function BucketListForm({addBrewery}) { 
+export default function BucketListForm({ addBrewery }) { 
     const [newBrewery, setNewBrewery] = useState ({
         name: '', 
             type: '',
@@ -10,25 +10,18 @@ export default function BucketListForm({addBrewery}) {
             state: '',
             beenTo: false, 
     }) 
-    function handleAddBrewery (evt) {
+    function handleSubmit(evt) {
         evt.preventDefault(); 
-        addBrewery(); 
-        setNewBrewery({
-            name: '', 
-            type: '',
-            address: '',
-            city: '',
-            state: '',
-            beenTo: false, 
-        }); 
+        addBrewery(newBrewery); 
     }
     function handleChange(evt){ 
         setNewBrewery({ ...newBrewery, [evt.target.name]: evt.target.value})
+        
     }
     return (
         <>
             <h3>Add New Brewery to Visit!</h3>
-            <form onSubmit={handleAddBrewery} className='breweryForm'>
+            <form onSubmit={handleSubmit} className='breweryForm'>
                 <label>Brewery Name</label>
                 <input
                     name="name"
@@ -47,24 +40,24 @@ export default function BucketListForm({addBrewery}) {
                 />  
                 <label>Address</label>
                 <input 
-                type="text" 
-                value={newBrewery.address}
-                name="address"
-                onChange={handleChange}
+                    type="text" 
+                    value={newBrewery.address}
+                    name="address"
+                    onChange={handleChange}
                 />
                 <label>City</label>
                 <input 
-                type="text" 
-                value={newBrewery.city}
-                name="city"
-                onChange={handleChange}
+                    type="text" 
+                    value={newBrewery.city}
+                    name="city"
+                    onChange={handleChange}
                 />
                 <label>State</label>
                 <input 
-                type="text" 
-                name="state"
-                value={newBrewery.state}
-                onChange={handleChange}
+                    type="text" 
+                    name="state"
+                    value={newBrewery.state}
+                    onChange={handleChange}
                 />
             <button type="submit">ADD BREWERY</button>
             </form>

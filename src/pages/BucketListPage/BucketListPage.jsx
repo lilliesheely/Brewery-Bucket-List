@@ -1,29 +1,32 @@
-import { useState } from 'react'; 
+import { useState, useEffect } from 'react'; 
+import * as bucketlistAPI from "../../utilities/bucket-list-api"
 import BucketListList   from '../../components/BucketListList/BucketListList';
 import BucketListForm   from '../../components/BucketListForm/BucketListForm';
+
 import './BucketListPage.css';
 
 export default function BucketListPage() {
-  const [breweries, setBreweries] = useState([ 
-    {
-      name: '', 
-      type: '',
-      address: '',
-      city: '',
-      state: '',
-      beenTo: false 
+  const [breweries, setBreweries] = useState([]); 
+  
+  useEffect(function() { 
+    async function getBreweries() { 
+      const allBreweries = await bucketlistAPI.getAll(); 
+      setBreweries(allBreweries); 
     }
-  ]); 
-  function addBrewery(brewery) {
+    getBreweries(); 
+  }, []); 
+
+  async function addBrewery(formData) {
+    const brewery = await bucketlistAPI.addOne(formData)
     setBreweries([...breweries, brewery]);
   }
-  console.log(breweries, 'BL page')
+
   return (
     <>
     <section className='bucketListPage'>
       <h1>Bucket List</h1>
       <div>
-        <BucketListForm addBrewery={addBrewery} />
+        <BucketListForm  addBrewery={ addBrewery }/>
       </div>
       <div>
         <BucketListList breweries={breweries}/> 
