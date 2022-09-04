@@ -14,6 +14,5 @@ module.exports = {
 
 async function index(req, res) {
      const breweries = await Brewery.find({ user: req.user._id})
-     console.log(breweries, index)
      res.json(breweries)
 }

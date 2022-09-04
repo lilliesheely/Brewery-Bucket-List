@@ -16,10 +16,11 @@ export default function BucketListPage() {
     getBreweries(); 
   }, []); 
 
-  async function addBrewery(formData) {
-    const brewery = await bucketlistAPI.addOne(formData)
+  function addBrewery(breweryFormData) {
+    const brewery = bucketlistAPI.addOne(breweryFormData);
     setBreweries([...breweries, brewery]);
   }
+  console.log(addBrewery)
 
   return (
     <>
