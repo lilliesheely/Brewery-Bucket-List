@@ -6,7 +6,7 @@ module.exports = {
     index, 
     create,
     show, 
-    // update  
+    updateBeenTo  
   };
 
 async function create(req, res) {
@@ -25,7 +25,9 @@ async function show(req, res) {
   res.json(brewery); 
 }
 
-// async function update(req, res) {
-//   const brewery = await Brewery.findOne({name: req.body.name, _id: req.params.id})
-//   res.json(brewery); 
-// }
+async function updateBeenTo(req, res) {
+  const brewery = await Brewery.findOne({name: req.body.name, _id: req.params.id})
+  console.log(brewery, 'update')
+  // brewery.beenTo = true; 
+  res.json(brewery); 
+}

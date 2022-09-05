@@ -10,6 +10,6 @@ export function addOne(formData) {
     return sendRequest(`${BASE_URL}`, 'POST', formData); 
 }
 
-// export function updateBeenTo() { 
-//     return sendRequest (`${BASE_URL}`)
-// }
+export function updateBeenTo(data) { 
+    return sendRequest (`${BASE_URL}`, 'PUT', data)
+}
