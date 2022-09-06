@@ -1,9 +1,7 @@
-import {useState, useEffect} from 'react'; 
-import RandomCard from '../RandomCard/RandomCard';
+import RandomBreweryCard from '../RandomBreweryCard/RandomBreweryCard';
 
 export default function GetRandomBrewery({getRandomBrewery, randomBrewery}) { 
-    console.log(randomBrewery, 'prop-random')
-    let breweries = randomBrewery.map((b) => ( <RandomCard key ={b.name} brewery={b} /> ))
+    let breweries = randomBrewery.map((b) => ( <RandomBreweryCard key ={b.name} brewery={b} /> ))
         
   return (
     <>

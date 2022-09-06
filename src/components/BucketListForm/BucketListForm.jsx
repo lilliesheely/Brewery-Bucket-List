@@ -24,42 +24,42 @@ export default function BucketListForm({ addBrewery }) {
             <form onSubmit={handleSubmit} className='breweryForm'>
                 <label>Brewery Name</label>
                 <input
-                    name="name"
+                    name='name'
                     value={newBrewery.name}
                     onChange={handleChange}
-                    placeholder="Brewery Name"
-                    type="text"
+                    placeholder='Brewery Name'
+                    type='text'
                 />
                 <label>Type</label>
                 <input
-                    name="type"
+                    name='type'
                     value={newBrewery.breweryType}
                     onChange={handleChange}
-                    placeholder="ie: Micro, brewpub, taproom, etc."
-                    type="text"
+                    placeholder='ie: Micro, brewpub, taproom, etc.'
+                    type='text'
                 />  
                 <label>Address</label>
                 <input 
-                    type="text" 
+                    type='text' 
                     value={newBrewery.address}
-                    name="address"
+                    name='address'
                     onChange={handleChange}
                 />
                 <label>City</label>
                 <input 
-                    type="text" 
+                    type='text' 
                     value={newBrewery.city}
-                    name="city"
+                    name='city'
                     onChange={handleChange}
                 />
                 <label>State</label>
                 <input 
-                    type="text" 
-                    name="state"
+                    type='text' 
+                    name='state'
                     value={newBrewery.state}
                     onChange={handleChange}
                 />
-                <button type="submit">ADD BREWERY</button>
+                <button type='submit'>ADD BREWERY</button>
             </form>
         </>
     )

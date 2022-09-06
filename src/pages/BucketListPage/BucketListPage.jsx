@@ -3,13 +3,14 @@ import * as breweriesAPI from "../../utilities/breweries-api"
 import BucketListList   from '../../components/BucketListList/BucketListList';
 import BucketListForm   from '../../components/BucketListForm/BucketListForm';
 import GetRandomBrewery from '../../components/GetRandomBrewery/GetRandomBrewery';
-import SearchCity from '../../components/SearchCity/SearchCity'
+// import BreweryByCity from '../../components/BreweryByCity/BreweryByCity'
 import './BucketListPage.css';
 
-export default function BucketListPage() {
-  const [breweries, setBreweries] = useState([]);
+export default function BucketListPage({breweries, setBreweries}) {
+  // const [breweries, setBreweries] = useState([]);
   const [randomBrewery, setRandomBrewery] = useState([]); 
-  console.log(breweries); 
+  const [breweryCity, setCityBrewery] = useState([]);
+
   
   useEffect(function() { 
     async function getBreweries() { 
@@ -32,9 +33,15 @@ export default function BucketListPage() {
 
   async function getRandomBrewery() {
     const randomBreweries = await breweriesAPI.getRandomBrewery(); 
-    console.log(randomBreweries)
     setRandomBrewery(randomBreweries); 
   }
+
+  // async function getBreweryByCity(evt){
+  //   evt.preventDefault();  
+  //   const cityBrewery = await breweriesAPI.getBreweryByCity(); 
+  //   console.log(cityBrewery)
+  //   setCityBrewery(cityBrewery);
+  // }
 
   return (
     <>
@@ -48,8 +55,9 @@ export default function BucketListPage() {
       <div> 
         <GetRandomBrewery getRandomBrewery={getRandomBrewery} randomBrewery={randomBrewery} /> 
       </div>
+      <div></div>
       <div> 
-        <SearchCity /> 
+        {/* <BreweryByCity getBreweryByCity={getBreweryByCity} breweryCity={breweryCity} />  */}
       </div>
     </section>
     </>  

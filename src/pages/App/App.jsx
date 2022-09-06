@@ -9,7 +9,8 @@ import './App.css';
 
 export default function App() {
   const [user, setUser] = useState(null);
-
+  const [breweries, setBreweries] = useState([]);
+  console.log(breweries, 'APPJS')
   return (
     <main className="App">
       { user ?
@@ -17,9 +18,9 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
-            <Route path='/bucketlist' element={<BucketListPage />} />
+            <Route path='/bucketlist' element={<BucketListPage breweries={breweries} setBreweries={setBreweries}/>} />
             <Route path='/' element={<HomePage />} />
-            <Route path='/:breweryName' element={<BreweryDetailPage />} />
+            <Route path='/:breweryName' element={<BreweryDetailPage breweries={breweries}  />} />
           </Routes>
         </>
         :

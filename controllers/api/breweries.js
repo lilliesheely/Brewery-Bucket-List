@@ -8,7 +8,8 @@ module.exports = {
     create,
     show, 
     updateBeenTo, 
-    randomBrewery  
+    randomBrewery, 
+    cityBrewery  
   };
 
 async function create(req, res) {
@@ -35,9 +36,14 @@ async function updateBeenTo(req, res) {
 }
 
 async function randomBrewery(req, res){
-  console.log('random')
   let randomBrewery = await fetch('https://api.openbrewerydb.org/breweries/random')
     .then((response) => response.json())
-  console.log(randomBrewery, "Next to random b")
   res.json(randomBrewery); 
 }
+
+async function cityBrewery(req, res) {
+  let cityBrewery = await fetch(`https://api.openbrewerydb.org/breweries?by_city=&${city}per_page=3`)
+    .then((response) => response.json())
+  res.json(cityBrewery); 
+}
+

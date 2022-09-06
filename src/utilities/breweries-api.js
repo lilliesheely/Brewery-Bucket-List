@@ -15,6 +15,9 @@ export function updateBeenTo(data) {
 };
 
 export function getRandomBrewery() {
-    console.log('breweries-api')
     return sendRequest(`${BASE_URL}/random`)
 }
+
+// export function getBreweryByCity() {
+//     return sendRequest(`${BASE_URL}/city`)
+// }
