@@ -1,12 +1,14 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const Brewery = require('../../models/brewery');
+var fetch = require('node-fetch')
 
 module.exports = {
     index, 
     create,
     show, 
-    updateBeenTo  
+    updateBeenTo, 
+    randomBrewery  
   };
 
 async function create(req, res) {
@@ -30,4 +32,12 @@ async function updateBeenTo(req, res) {
   console.log(brewery, 'update')
   // brewery.beenTo = true; 
   res.json(brewery); 
+}
+
+async function randomBrewery(req, res){
+  console.log('random')
+  let randomBrewery = await fetch('https://api.openbrewerydb.org/breweries/random')
+    .then((response) => response.json())
+  console.log(randomBrewery, "Next to random b")
+  res.json(randomBrewery); 
 }

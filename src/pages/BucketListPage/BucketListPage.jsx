@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'; 
-import * as bucketlistAPI from "../../utilities/bucket-list-api"
+import * as breweriesAPI from "../../utilities/breweries-api"
 import BucketListList   from '../../components/BucketListList/BucketListList';
 import BucketListForm   from '../../components/BucketListForm/BucketListForm';
 import GetRandomBrewery from '../../components/GetRandomBrewery/GetRandomBrewery';
@@ -7,12 +7,13 @@ import SearchCity from '../../components/SearchCity/SearchCity'
 import './BucketListPage.css';
 
 export default function BucketListPage() {
-  const [breweries, setBreweries] = useState([]); 
+  const [breweries, setBreweries] = useState([]);
+  const [randomBrewery, setRandomBrewery] = useState([]); 
   console.log(breweries); 
   
   useEffect(function() { 
     async function getBreweries() { 
-      const allBreweries = await bucketlistAPI.getAll(); 
+      const allBreweries = await breweriesAPI.getAll(); 
       setBreweries(allBreweries); 
     }
     getBreweries(); 
@@ -20,32 +21,34 @@ export default function BucketListPage() {
  
 
   async function addBrewery(breweryFormData) {
-    const brewery = await bucketlistAPI.addOne(breweryFormData);
+    const brewery = await breweriesAPI.addOne(breweryFormData);
     setBreweries([...breweries, brewery]);
   }
 
   async function visitedBrewery(data) {
-    const visited = await bucketlistAPI.updateBeenTo(data)
+    const visited = await breweriesAPI.updateBeenTo(data)
       setBreweries(visited); 
-    }
+  }
+
+  async function getRandomBrewery() {
+    const randomBreweries = await breweriesAPI.getRandomBrewery(); 
+    console.log(randomBreweries)
+    setRandomBrewery(randomBreweries); 
+  }
 
   return (
     <>
     <section className='bucketListPage'>
       <div>
-        <h1>Add Brewery to Bucket List!</h1>
         <BucketListForm  addBrewery={ addBrewery }/>
       </div>
       <div>
-        <h2>Bucket List</h2>
         <BucketListList breweries={breweries} visitedBrewery={visitedBrewery}/> 
       </div>
       <div> 
-        <h2>Random Brewery</h2> 
-        <GetRandomBrewery /> 
+        <GetRandomBrewery getRandomBrewery={getRandomBrewery} randomBrewery={randomBrewery} /> 
       </div>
       <div> 
-        <h2>Search Breweries by City</h2> 
         <SearchCity /> 
       </div>
     </section>

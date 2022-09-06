@@ -11,5 +11,10 @@ export function addOne(formData) {
 }
 
 export function updateBeenTo(data) { 
-    return sendRequest (`${BASE_URL}`, 'PUT', data)
+    return sendRequest(`${BASE_URL}`, 'PUT', data)
+};
+
+export function getRandomBrewery() {
+    console.log('breweries-api')
+    return sendRequest(`${BASE_URL}/random`)
 }

@@ -6,6 +6,9 @@ export default function BucketListList({breweries, visitedBrewery}) {
         <BucketListItem key={idx} index ={idx} brewery={brewery} visitedBrewery={visitedBrewery}/> 
     )
     return (
-       <li>{allBreweries}</li>
+        <>
+            <h2>Bucket List</h2>
+            {allBreweries}
+        </>
     )
 }

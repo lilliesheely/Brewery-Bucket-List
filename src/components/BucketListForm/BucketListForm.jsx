@@ -20,7 +20,7 @@ export default function BucketListForm({ addBrewery }) {
     }
     return (
         <>
-            <h3>Add New Brewery to Visit!</h3>
+            <h1>Add Brewery to Bucket List!</h1>
             <form onSubmit={handleSubmit} className='breweryForm'>
                 <label>Brewery Name</label>
                 <input
