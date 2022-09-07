@@ -18,7 +18,7 @@ async function create(req, res) {
   }
 
 async function index(req, res) {
-     const breweries = await Brewery.find({ user: req.user._id}).sort('city').exec()
+     const breweries = await Brewery.find({ user: req.user._id}).sort('beenTo').sort('city').exec()
      res.json(breweries);
 }
 

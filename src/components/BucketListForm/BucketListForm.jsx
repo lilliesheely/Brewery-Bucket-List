@@ -10,9 +10,18 @@ export default function BucketListForm({ addBrewery }) {
         state: '',
         beenTo: false, 
     }) 
+
     function handleSubmit(evt) {
         evt.preventDefault(); 
         addBrewery(newBrewery); 
+        setNewBrewery({
+            name: '', 
+            breweryType: '',
+            address: '',
+            city: '',
+            state: '',
+            beenTo: false, 
+        })
     }
     function handleChange(evt){ 
         setNewBrewery({ ...newBrewery, [evt.target.name]: evt.target.value})

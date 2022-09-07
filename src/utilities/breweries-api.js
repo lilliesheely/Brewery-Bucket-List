@@ -11,7 +11,7 @@ export function addOne(formData) {
 }
 
 export function updateBeenTo(id) { 
-    return sendRequest(`${BASE_URL}/${id}`, 'PUT', {id})
+    return sendRequest(`${BASE_URL}/update/${id}`, 'PUT')
 };
 
 export function getRandomBrewery() {

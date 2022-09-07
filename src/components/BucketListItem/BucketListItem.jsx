@@ -7,9 +7,9 @@ export default function BucketListItem({brewery, visitedBrewery}) {
             to={`/${brewery.name}`} 
             className='list-link'
         > 
-       {brewery.beenTo === false ? `${brewery.name} - ${brewery.city}, ${brewery.state}` : `done`}
+        {brewery.beenTo === false ? `${brewery.name} - ${brewery.city}, ${brewery.state}` : `Been to: ${brewery.name} `}
         </Link>
-        <button onClick={() => visitedBrewery(`${brewery._id}`)}>✔️</button><br />
+        {brewery.beenTo === false ? <button onClick={() => visitedBrewery(brewery._id)}>✔️</button> : '' } <br />
         </>
      )
     }
