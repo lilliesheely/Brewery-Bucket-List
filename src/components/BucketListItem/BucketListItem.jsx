@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
 
 export default function BucketListItem({brewery, visitedBrewery}) {
+    if (brewery.beenTo === false ) 
     return (
         <>
-        <Link 
-            to={`/${brewery.name}`} 
-            className='list-link'
-        > 
-        {brewery.beenTo === false ? `${brewery.name} - ${brewery.city}, ${brewery.state}` : `Been to: ${brewery.name} `}
-        </Link>
-        {brewery.beenTo === false ? <button onClick={() => visitedBrewery(brewery._id)}>✔️</button> : '' } <br />
+       <li>{brewery.name} - {brewery.city}, {brewery.state}
+        <button onClick={() => visitedBrewery(brewery._id)}>✔️</button> </li>
         </>
      )
     }

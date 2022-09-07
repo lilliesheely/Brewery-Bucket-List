@@ -27,4 +27,12 @@ const brewerySchema = new Schema({
     timestamps: true
 })
 
+brewerySchema.methods.addReviewToBrewery = async function(reviewId) {
+    const brewRev = this;
+    const brewery = await Brewery.findById(reviewId); 
+    const newReview = { review }
+    brewery.reviews.push(newReview);
+    return brewery.save();
+  };
+
 module.exports = mongoose.model('Brewery', brewerySchema);

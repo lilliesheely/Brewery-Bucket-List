@@ -8,7 +8,9 @@ module.exports = {
     create,
     show, 
     updateBeenTo, 
-    randomBrewery  
+    randomBrewery, 
+    createReview, 
+    addRandomBrewery  
   };
 
 async function create(req, res) {
@@ -23,14 +25,11 @@ async function index(req, res) {
 }
 
 async function show(req, res) { 
-  const brewery = await Brewery.findOne({name: req.body.name})
-  res.json(brewery); 
+  const brewery = await Brewery.findOne({name: req.body.name, user: req.user._id})
 }
 
 async function updateBeenTo(req, res) {
-  console.log({_id: req.params.id});
   const brewery = await Brewery.findOne({user: req.user._id, _id: req.params.id})
-  console.log('Finding Brewery', brewery)
     brewery.beenTo = true; 
     await brewery.save(); 
   res.json(brewery); 
@@ -42,4 +41,25 @@ async function randomBrewery(req, res){
   res.json(randomBrewery); 
 }
 
+async function createReview(req, res) {
+  console.log({_id: req.params.id}, "ID");
+  const brewery = await Brewery.findOne({name: req.body.name, user: req.user._id})
+  // brewery.reviews.push(req.body)
+  await brewery.save()
+  console.log(brewery, 'review-brewery')
+  res.json(brewery); 
+}
 
+async function addRandomBrewery(req, res) {
+  req.body.user = req.user._id; 
+  const brewery = await Brewery.addRandomBrewery(
+    req.body.name = name,
+    req.body.breweryType = brewery_type,
+    req.body.street = address,
+    req.body.city = city,
+    req.body.state = state,
+    ); 
+    await brewery.save()
+    console.log(brewery, "addrandombrewery")
+  res.json(brewery);
+}
