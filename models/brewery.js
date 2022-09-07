@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const reviewSchema = new Schema({ 
+    rating: String, 
+    name: String, 
+    style: String, 
+    notes: String
+})
+
 const brewerySchema = new Schema({
     name: {
         type: String,
@@ -14,6 +21,7 @@ const brewerySchema = new Schema({
         type: Boolean, 
         default: false 
     },
+    reviews: [reviewSchema],
     user: {type: Schema.Types.ObjectId, ref: "User"}, 
 }, {
     timestamps: true

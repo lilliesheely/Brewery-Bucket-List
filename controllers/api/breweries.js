@@ -19,7 +19,7 @@ async function create(req, res) {
   }
 
 async function index(req, res) {
-     const breweries = await Brewery.find({ user: req.user._id})
+     const breweries = await Brewery.find({ user: req.user._id}).sort('city').exec()
      res.json(breweries);
 }
 
@@ -29,9 +29,12 @@ async function show(req, res) {
 }
 
 async function updateBeenTo(req, res) {
-  const brewery = await Brewery.findOne({name: req.body.name, _id: req.params.id})
-  console.log(brewery, 'update')
-  // brewery.beenTo = true; 
+  console.log('TEST')
+  const brewery = await Brewery.findOne({user: req.user._id, id: req.params.id})
+  console.log('Finding Brewery', brewery)
+    brewery.beenTo = true; 
+    await brewery.save(); 
+    console.log(brewery, 'update')
   res.json(brewery); 
 }
 

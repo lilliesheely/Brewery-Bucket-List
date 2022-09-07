@@ -7,9 +7,8 @@ import GetRandomBrewery from '../../components/GetRandomBrewery/GetRandomBrewery
 import './BucketListPage.css';
 
 export default function BucketListPage({breweries, setBreweries}) {
-  // const [breweries, setBreweries] = useState([]);
   const [randomBrewery, setRandomBrewery] = useState([]); 
-  const [breweryCity, setCityBrewery] = useState([]);
+  // const [breweryCity, setCityBrewery] = useState([]);
 
   
   useEffect(function() { 
@@ -26,8 +25,8 @@ export default function BucketListPage({breweries, setBreweries}) {
     setBreweries([...breweries, brewery]);
   }
 
-  async function visitedBrewery(data) {
-    const visited = await breweriesAPI.updateBeenTo(data)
+  async function visitedBrewery() {
+    const visited = await breweriesAPI.updateBeenTo()
       setBreweries(visited); 
   }
 

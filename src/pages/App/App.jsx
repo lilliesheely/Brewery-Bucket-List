@@ -10,7 +10,7 @@ import './App.css';
 export default function App() {
   const [user, setUser] = useState(null);
   const [breweries, setBreweries] = useState([]);
-  console.log(breweries, 'APPJS')
+  console.log(breweries, 'STATE')
   return (
     <main className="App">
       { user ?
