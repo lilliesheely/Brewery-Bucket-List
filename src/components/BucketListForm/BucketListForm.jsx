@@ -32,7 +32,7 @@ export default function BucketListForm({ addBrewery }) {
                 />
                 <label>Type</label>
                 <input
-                    name='type'
+                    name='breweryType'
                     value={newBrewery.breweryType}
                     onChange={handleChange}
                     placeholder='ie: Micro, brewpub, taproom, etc.'

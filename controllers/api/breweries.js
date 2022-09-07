@@ -8,8 +8,7 @@ module.exports = {
     create,
     show, 
     updateBeenTo, 
-    randomBrewery, 
-    cityBrewery  
+    randomBrewery  
   };
 
 async function create(req, res) {
@@ -29,12 +28,11 @@ async function show(req, res) {
 }
 
 async function updateBeenTo(req, res) {
-  console.log('TEST')
-  const brewery = await Brewery.findOne({user: req.user._id, id: req.params.id})
+  console.log({_id: req.params.id});
+  const brewery = await Brewery.findOne({user: req.user._id, _id: req.params.id})
   console.log('Finding Brewery', brewery)
     brewery.beenTo = true; 
     await brewery.save(); 
-    console.log(brewery, 'update')
   res.json(brewery); 
 }
 
@@ -44,9 +42,4 @@ async function randomBrewery(req, res){
   res.json(randomBrewery); 
 }
 
-async function cityBrewery(req, res) {
-  let cityBrewery = await fetch(`https://api.openbrewerydb.org/breweries?by_city=&${city}per_page=3`)
-    .then((response) => response.json())
-  res.json(cityBrewery); 
-}
 

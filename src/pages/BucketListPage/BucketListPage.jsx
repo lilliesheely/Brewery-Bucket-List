@@ -25,8 +25,8 @@ export default function BucketListPage({breweries, setBreweries}) {
     setBreweries([...breweries, brewery]);
   }
 
-  async function visitedBrewery() {
-    const visited = await breweriesAPI.updateBeenTo()
+  async function visitedBrewery(id) {
+    const visited = await breweriesAPI.updateBeenTo(id)
       setBreweries(visited); 
   }
 

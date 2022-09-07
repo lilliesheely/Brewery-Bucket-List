@@ -10,14 +10,13 @@ export function addOne(formData) {
     return sendRequest(`${BASE_URL}`, 'POST', formData); 
 }
 
-export function updateBeenTo(breweryId) { 
-    return sendRequest(`${BASE_URL}/${breweryId}`, 'PUT')
+export function updateBeenTo(id) { 
+    return sendRequest(`${BASE_URL}/${id}`, 'PUT', {id})
 };
 
 export function getRandomBrewery() {
     return sendRequest(`${BASE_URL}/random`)
 }
 
-// export function getBreweryByCity() {
-//     return sendRequest(`${BASE_URL}/city`)
-// }
+
+
