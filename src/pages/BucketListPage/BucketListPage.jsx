@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'; 
-import {useNavigate} from 'react-router-dom'; 
 import * as breweriesAPI from "../../utilities/breweries-api"
 import BucketListList   from '../../components/BucketListList/BucketListList';
 import BucketListForm   from '../../components/BucketListForm/BucketListForm';
@@ -35,10 +34,8 @@ export default function BucketListPage({breweries, setBreweries}) {
   }
 
   async function deleteBrewery(id) {
-    console.log("deleteBrewery", id);
     const brewerySpots = await breweriesAPI.deleteBrewery(id);
     const updatedList = breweries.filter((b) => b._id !== brewerySpots._id)
-   
     setBreweries(updatedList);
   }
 

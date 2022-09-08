@@ -1,6 +1,6 @@
 import BucketListItem from '../BucketListItem/BucketListItem'
 
-export default function BucketListList({breweries, visitedBrewery, deleteBrewery}) {
+export default function BucketListList({ breweries, visitedBrewery, deleteBrewery }) {
     
     const allBreweries = breweries.map((brewery, idx) => 
         <BucketListItem key={idx} index ={idx} brewery={brewery} visitedBrewery={visitedBrewery} deleteBrewery={deleteBrewery}/> 

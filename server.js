@@ -28,6 +28,7 @@ const port = process.env.PORT ||  3001;
 const ensureLoggedIn = require('./config/ensureLoggedIn');
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/breweries', ensureLoggedIn, require('./routes/api/breweries')); 
+app.use('/api/breweries', ensureLoggedIn, require('./routes/api/reviews')); 
 
 
 // The following "catch all" route (note the *) is necessary

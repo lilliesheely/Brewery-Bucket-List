@@ -3,17 +3,17 @@ import { useState } from 'react';
 export default function BreweryReviewForm({ handleAddReview }){
     const [newReview, setNewReview] = useState ({ 
         rating: '', 
-        name: '', 
+        beerName: '', 
         style: '', 
         notes: ''
     })
-    
+
     function handleSubmit(evt) {
         evt.preventDefault();
         handleAddReview(newReview);
         setNewReview({
             rating: '', 
-            name: '', 
+            beerName: '', 
             style: '', 
             notes: ''
           });
@@ -22,9 +22,9 @@ export default function BreweryReviewForm({ handleAddReview }){
     function handleChange(evt) {
         setNewReview({...newReview, [evt.target.name]: evt.target.value})
     }
-   
+ 
     return(
-        <form onSubmit={() => handleSubmit()}>
+        <form onSubmit={handleSubmit}>
             <label>Rating</label>
             <select
                 name='rating'
@@ -40,23 +40,23 @@ export default function BreweryReviewForm({ handleAddReview }){
             <label >Name</label>
             <input 
                 type='text' 
-                name='name'
-                onChange={handleChange}
                 value={newReview.name} 
+                name='beerName'
+                onChange={handleChange}
             />
             <label>Style</label>
             <input 
                 type='text'
+                value={newReview.style} 
                 name='style'
                 onChange={handleChange}
-                value={newReview.style} 
             />
             <label>Review Notes</label>
             <input 
                 type='text'
+                value={newReview.notes}
                 name='notes'
                 onChange={handleChange}
-                value={newReview.notes}
             />
             <button type='submit'>Add Beer Review</button>
         </form>

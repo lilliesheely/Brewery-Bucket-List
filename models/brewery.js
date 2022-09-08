@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({ 
     rating: String, 
-    name: String, 
+    beerName: String, 
     style: String, 
     notes: String
 })
