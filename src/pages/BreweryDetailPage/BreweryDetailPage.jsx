@@ -11,7 +11,7 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
     let brewery = breweries.find(brew => brew.name === breweryName)
 
     async function handleAddReview(review) {
-        const reviewTest = await reviewsAPI.addReview(review);
+        const reviewTest = await reviewsAPI.addReview(brewery._id, review);
         setReviews([...reviews, reviewTest]);   
     }
 

@@ -24,7 +24,7 @@ async function index(req, res) {
 }
 
 async function show(req, res) { 
-  const brewery = await Brewery.findOne({name: req.body.name, user: req.user._id})
+  const brewery = await Brewery.findOne({_id: req.params.id, user: req.user._id})
 }
 
 async function updateBeenTo(req, res) {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function BreweryReviewForm({ handleAddReview }){
+export default function BreweryReviewForm({ handleAddReview, brewery }){
     const [newReview, setNewReview] = useState ({ 
         rating: '', 
         beerName: '', 
