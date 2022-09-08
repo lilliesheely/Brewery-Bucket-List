@@ -10,8 +10,6 @@ import './BucketListPage.css';
 export default function BucketListPage({breweries, setBreweries}) {
   const [randomBrewery, setRandomBrewery] = useState([]); 
 
-
-  
   useEffect(function() { 
     async function getBreweries() { 
       const allBreweries = await breweriesAPI.getAll(); 
@@ -36,6 +34,14 @@ export default function BucketListPage({breweries, setBreweries}) {
     setRandomBrewery(randomBreweries); 
   }
 
+  async function deleteBrewery(id) {
+    console.log("deleteBrewery", id);
+    const brewerySpots = await breweriesAPI.deleteBrewery(id);
+    const updatedList = breweries.filter((b) => b._id !== brewerySpots._id)
+   
+    setBreweries(updatedList);
+  }
+
   return (
     <>
     <section className='bucketListPage'>
@@ -43,7 +49,7 @@ export default function BucketListPage({breweries, setBreweries}) {
         <BucketListForm  addBrewery={ addBrewery }/>
       </div>
       <div>
-        <BucketListList breweries={breweries} visitedBrewery={visitedBrewery}/> 
+        <BucketListList breweries={breweries} visitedBrewery={visitedBrewery} deleteBrewery={deleteBrewery}/> 
       </div>
       <div> 
         <GetRandomBrewery getRandomBrewery={getRandomBrewery} randomBrewery={randomBrewery} addBrewery={addBrewery} breweries={breweries} /> 

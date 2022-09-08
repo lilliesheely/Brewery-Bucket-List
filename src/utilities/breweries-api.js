@@ -18,10 +18,14 @@ export function getRandomBrewery() {
     return sendRequest(`${BASE_URL}/random`)
 }
 
-export function addReview(id, formData) {
-    return sendRequest(`${BASE_URL}/${id}/review`, 'POST', formData)
-}
+// export function addReview(id, formData) {
+//     return sendRequest(`${BASE_URL}/${id}/review`, 'POST', formData)
+// }
 
 export function addRandomBrewery() {
     return sendRequest(`${BASE_URL}`, 'POST')
+}
+
+export function deleteBrewery(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
 }

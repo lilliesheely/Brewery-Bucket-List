@@ -7,18 +7,12 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
     const { breweryName } = useParams()
     const [reviews, setReviews] = useState([]); 
     let brewery = breweries.find(brew => brew.name === breweryName)
-    
-    async function handleAddReview(review){
-        const breweryRev = await breweriesAPI.addReview()
-        setReviews([...reviews, review])
-    }
-    console.log(reviews)
-    async function visitedBrewery(id) {
-        const visited = await breweriesAPI.updateBeenTo(id);
-        const updatedList = breweries.map(b => b._id === visited._id ? visited : b)
-        setBreweries(updatedList); 
-      }
-console.log(brewery.reviews[0], "review")
+
+    // async function visitedBrewery(id) {
+    //     const visited = await breweriesAPI.updateBeenTo(id);
+    //     const updatedList = breweries.map(b => b._id === visited._id ? visited : b)
+    //     setBreweries(updatedList); 
+    //   }
     return (
         <>
         <h1>{brewery.name}</h1> 
@@ -26,7 +20,7 @@ console.log(brewery.reviews[0], "review")
         <h1>{brewery.address}</h1> 
         <h1>{brewery.city}</h1> 
         <h1>{brewery.state}</h1> 
-        <BreweryReviewForm handleAddReview={handleAddReview}/> 
+        <BreweryReviewForm /> 
         <h3>Beer Reviews</h3>
         <h1>review: {brewery.reviews[0]}</h1>
        </>
