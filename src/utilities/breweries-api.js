@@ -25,3 +25,7 @@ export function addRandomBrewery() {
 export function deleteBrewery(id) {
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
 }
+
+export function getBreweriesByCity(formData) {
+    return sendRequest(`${BASE_URL}/city`, formData)
+}

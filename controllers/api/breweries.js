@@ -10,6 +10,7 @@ module.exports = {
     updateBeenTo, 
     randomBrewery, 
     deleteBrewery,  
+    breweryByCity
   };
 
 async function create(req, res) {
@@ -43,5 +44,13 @@ async function randomBrewery(req, res){
 async function deleteBrewery(req, res) {
   const brewery = await Brewery.findOneAndDelete({user: req.user._id, _id: req.params.id})
   res.json(brewery);
+}
+
+async function breweryByCity(req, res) {
+  console.log(req.body, 'req, body')
+  let breweriesByCity = await fetch(`https://api.openbrewerydb.org/breweries?by_city=${req.body}per_page=3`)
+    .then((response) => response.json())
+    console.log(breweriesByCity, "backend")
+  res.json(breweriesByCity)
 }
 

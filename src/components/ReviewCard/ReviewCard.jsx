@@ -1,4 +1,4 @@
-export default function ReviewCard({review}) {
+export default function ReviewCard({ review }) {
     return (
         <>
         <div>
