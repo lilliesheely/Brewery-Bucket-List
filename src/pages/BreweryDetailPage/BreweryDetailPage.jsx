@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import BreweryReviewForm from '../../components/BreweryReviewForm/BreweryReviewForm'; 
+import BeerReviewsList from '../../components/BeerReviewsList/BeerReviewsList'; 
 import * as reviewsAPI from '../../utilities/reviews-api';
 
 
@@ -12,8 +13,15 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
 
     async function handleAddReview(review) {
         const reviewTest = await reviewsAPI.addReview(brewery._id, review);
-        setReviews([...reviews, reviewTest]);   
+        const updatedBrewrey = reviews.map(r => r._id === reviewTest._id ? reviewTest._id : r)
+        setReviews(updatedBrewrey);   
     }
+
+    // async function visitedBrewery(id) {
+    //     const visited = await breweriesAPI.updateBeenTo(id);
+    //     const updatedList = breweries.map(b => b._id === visited._id ? visited : b)
+    //     setBreweries(updatedList); 
+
 
     return (
         <>
@@ -23,8 +31,7 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
         <h1>{brewery.city}</h1> 
         <h1>{brewery.state}</h1> 
         <BreweryReviewForm  handleAddReview={handleAddReview} brewery={brewery}  /> 
-        <h3>Beer Reviews</h3>
-        <h1>review:</h1>
+        <BeerReviewsList breweries={breweries} /> 
        </>
     )
 }

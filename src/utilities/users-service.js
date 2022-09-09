@@ -1,49 +1,51 @@
-// Service modules are where we put our
+// Serice modules hold the code that implements
 // "business"/application logic
-// For example, when we signup or log in, 
-// we will need to save the token we received 
-// from the server - is that type of code
-// good to put in the React component?
-// NO!
+// Service methods often depend upon or use
+// methods in the API modules
 
+// Import all named exports
 import * as usersAPI from './users-api';
 
 export async function signUp(userData) {
-  // Delegate the request to the users-api
-  // which will ultimatelly return a JSON Web Token (JWT)
+  // Delegate the AJAX request to the users-api.js
+  // module.
   const token = await usersAPI.signUp(userData);
-  // Persist the token 
-  localStorage.setItem('token', token);
-  // baby step (TODO: return a user object)
-  return getUser();
-}
-
-export async function login(credentials) {
-  const token = await usersAPI.login(credentials);
   localStorage.setItem('token', token);
   return getUser();
 }
 
-export function logOut() {
-  localStorage.removeItem('token'); 
-}
-
-// Return the token if valid, otherwise return null
 export function getToken() {
+  // getItem will return null if the key does not exist
   const token = localStorage.getItem('token');
   if (!token) return null;
-  // Obtain the payload of the token
-  // so that we can check if it's expired
+  // Let's check if token has expired...
   const payload = JSON.parse(atob(token.split('.')[1]));
   if (payload.exp < Date.now() / 1000) {
+    // Token has expired
     localStorage.removeItem('token');
     return null;
   }
   return token;
 }
 
+
 export function getUser() {
   const token = getToken();
-  return token ? JSON.parse(atob(token.split('.')[1])).user : null;
+  return token ?
+    JSON.parse(atob(token.split('.')[1])).user
+    :
+    null;
+}
+
+export function logOut() {
+  localStorage.removeItem('token');
+}
+
+export async function login(credentials) {
+  // Delegate the AJAX request to the users-api.js
+  // module.
+  const token = await usersAPI.login(credentials);
+  localStorage.setItem('token', token);
+  return getUser();
 }
 

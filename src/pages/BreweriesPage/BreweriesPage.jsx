@@ -1,6 +1,5 @@
-import * as breweriesAPI from '../../utilities/breweries-api'
 import BreweriesCard from '../../components/BreweriesCard/BreweriesCard'
-export default function BreweriesPage({ breweries, setBreweries }){ 
+export default function BreweriesPage({ breweries }){ 
     const breweryInd = breweries.map((b, idx) => (<BreweriesCard key ={idx} brewery={b} /> ))
     return (
         <>

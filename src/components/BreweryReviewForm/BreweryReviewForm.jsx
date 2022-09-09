@@ -40,7 +40,7 @@ export default function BreweryReviewForm({ handleAddReview, brewery }){
             <label >Name</label>
             <input 
                 type='text' 
-                value={newReview.name} 
+                value={newReview.beerName} 
                 name='beerName'
                 onChange={handleChange}
             />

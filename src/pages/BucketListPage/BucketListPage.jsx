@@ -9,14 +9,7 @@ import './BucketListPage.css';
 export default function BucketListPage({breweries, setBreweries}) {
   const [randomBrewery, setRandomBrewery] = useState([]); 
 
-  useEffect(function() { 
-    async function getBreweries() { 
-      const allBreweries = await breweriesAPI.getAll(); 
-      setBreweries(allBreweries); 
-    }
-    getBreweries(); 
-  }, []); 
- 
+
   async function addBrewery(breweryFormData) {
     const brewery = await breweriesAPI.addOne(breweryFormData);
     setBreweries([...breweries, brewery]);
@@ -46,7 +39,7 @@ export default function BucketListPage({breweries, setBreweries}) {
         <BucketListForm  addBrewery={ addBrewery }/>
       </div>
       <div>
-        <BucketListList breweries={breweries} visitedBrewery={visitedBrewery} deleteBrewery={deleteBrewery}/> 
+        <BucketListList breweries={breweries} visitedBrewery={visitedBrewery} deleteBrewery={deleteBrewery} /> 
       </div>
       <div> 
         <GetRandomBrewery getRandomBrewery={getRandomBrewery} randomBrewery={randomBrewery} addBrewery={addBrewery} breweries={breweries} /> 
