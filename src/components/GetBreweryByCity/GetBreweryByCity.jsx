@@ -1,20 +1,17 @@
 import { useState } from 'react'; 
 
 export default function GetBreweryByCity({ getBreweryByCity }) {
-    const [city, setCity] = useState(
-        {cityName: ''} 
-    )
+    const [newCity, setNewCity] = useState('')
     
+
     async function handleSubmit(evt) {
         evt.preventDefault()
-        getBreweryByCity(city); 
-        setCity({ 
-            cityName: ''
-        })
+        getBreweryByCity(newCity); 
+        setNewCity('')
     }
 
     async function handleChange(evt) {
-        setCity({...city, [evt.target.name]: evt.target.value})
+        setNewCity(evt.target.value)
     }
 
     return (
@@ -22,8 +19,7 @@ export default function GetBreweryByCity({ getBreweryByCity }) {
             <label>Search by City</label>
             <input 
             type='text'
-            name='cityName'
-            value={city.cityName.replaceAll(' ', '_')} 
+            value={newCity} 
             onChange={handleChange} 
             />
             <button type='submit'>Search</button>

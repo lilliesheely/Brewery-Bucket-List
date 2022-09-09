@@ -10,6 +10,7 @@ import './BucketListPage.css';
 export default function BucketListPage({breweries, setBreweries}) {
   const [randomBrewery, setRandomBrewery] = useState([]); 
   const [breweryByCity, setBreweryByCity] = useState([]); 
+
   console.log(breweryByCity, 'CITY')
   async function addBrewery(breweryFormData) {
     const brewery = await breweriesAPI.addOne(breweryFormData);
@@ -33,8 +34,8 @@ export default function BucketListPage({breweries, setBreweries}) {
     setBreweries(updatedList);
   }
 
-  async function getBreweryByCity(formData) {
-    const breweriesByCity = await breweriesAPI.getBreweriesByCity(formData); 
+  async function getBreweryByCity(city) {
+    const breweriesByCity = await breweriesAPI.getBreweriesByCity(city); 
     setBreweryByCity(breweriesByCity)
   }
 
@@ -53,7 +54,7 @@ export default function BucketListPage({breweries, setBreweries}) {
       <div>
       </div>
       <div> 
-       <GetBreweryByCity getBreweryByCity={getBreweryByCity} />
+       <GetBreweryByCity getBreweryByCity={getBreweryByCity} setBreweryByCity={setBreweryByCity} />
       </div>
     </section>
     </>  

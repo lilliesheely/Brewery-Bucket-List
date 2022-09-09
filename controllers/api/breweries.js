@@ -2,6 +2,9 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const Brewery = require('../../models/brewery');
 var fetch = require('node-fetch')
+const api_url = 'https://api.openbrewerydb.org/breweries?by_city='
+const perCity= '&per_page=3'
+
 
 module.exports = {
     index, 
@@ -47,10 +50,10 @@ async function deleteBrewery(req, res) {
 }
 
 async function breweryByCity(req, res) {
-  console.log(req.body, 'req, body')
-  let breweriesByCity = await fetch(`https://api.openbrewerydb.org/breweries?by_city=${req.body}per_page=3`)
+  console.log(req.params.city, 'city')
+  let breweriesByCity = await fetch(`https://api.openbrewerydb.org/breweries?by_city=${req.params.city}&per_page=3`)
     .then((response) => response.json())
-    console.log(breweriesByCity, "backend")
+    console.log(breweriesByCity, "list of breweries by city")
   res.json(breweriesByCity)
 }
 
