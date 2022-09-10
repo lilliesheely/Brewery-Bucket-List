@@ -1,0 +1,12 @@
+.breweryByCity-btn:before {
+    content:' ➕ '
+    
+}
+.breweryByCity-btn:hover:before {
+    content:'Add to List';
+    color: black; 
+    text-align: center;
+    font-size: 12px;
+    
+}
+

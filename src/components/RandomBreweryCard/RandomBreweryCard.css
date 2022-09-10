@@ -2,3 +2,16 @@
  text-decoration: none;   
  color: black; 
 }
+
+.rbc-btn:before {
+    content: ' ➕ '
+}
+
+
+.rbc-btn:hover:before {
+    content:'Add to List';
+    color: black; 
+    text-align: center;
+    font-size: 12px; 
+}
+

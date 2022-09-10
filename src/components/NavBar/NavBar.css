@@ -1,0 +1,18 @@
+.navBar {
+    background-color: white;
+    padding: 0;
+    height: 15vmin; 
+    display: grid;
+    grid-template-columns: 40vmin 40vmin 40vmin 40vmin 40vmin;
+    align-items: center; 
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navBar-End {
+    padding-right: 2px;
+    text-align: right;
+}

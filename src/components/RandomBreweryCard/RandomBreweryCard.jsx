@@ -16,34 +16,45 @@ export default function RandomBreweryCard({brewery, addBrewery}){
    }
     return(
         <div>
-            <h1>{brewery.name} </h1>
-            <h4> <i>{brewery.brewery_type} </i></h4>
-            <p>{brewery.street}, <br />{brewery.city}, {brewery.state} </p>
-            {brewery.website_url ?  <a href={brewery.website_url} target='_blank' className='RBC-atag'>Website</a> : '' } <br />
+            <table>
             
-            <form onSubmit={handleSubmit}>
-                <input type='hidden' 
-                    value={brewery.name}
-                    name='name'
-                />
-                <input type='hidden' 
-                    value={brewery.brewery_type}
-                    name='breweryType'
-                />
-                <input type='hidden' 
-                    value={brewery.street}
-                    name='address'
-                />
-                <input type='hidden' 
-                    value={brewery.name}
-                    name='city'
-                />
-                <input type='hidden' 
-                    value={brewery.state}
-                    name='state'
-                />
-                <button type='submit'>Add to Bucket List</button>
-            </form>
+                <tbody>
+                    <tr>
+                        <td>{brewery.name} </td>
+                        <td><i>{brewery.brewery_type} </i></td>
+                        <td>{brewery.city}</td>
+                        <td>{brewery.state}</td>
+                        <td>{brewery.website_url ?  <a href={brewery.website_url} target='_blank' className='RBC-atag'>Website</a> : 'No website available'}</td> 
+                        <td>
+                            <form onSubmit={handleSubmit}>
+                                <input type='hidden' 
+                                    value={brewery.name}
+                                    name='name'
+                                />
+                                <input type='hidden' 
+                                    value={brewery.brewery_type}
+                                    name='breweryType'
+                                />
+                                <input type='hidden' 
+                                    value={brewery.street}
+                                    name='address'
+                                />
+                                <input type='hidden' 
+                                    value={brewery.city}
+                                    name='city'
+                                />
+                                <input type='hidden' 
+                                    value={brewery.state}
+                                    name='state'
+                                />
+                                <button className='rbc-btn' type='submit'></button> 
+                            </form>
+                        </td>    
+                    </tr>
+                </tbody>
+            </table>
+
+            
         </div>
     )
 }

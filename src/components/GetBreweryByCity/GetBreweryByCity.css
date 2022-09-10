@@ -1,0 +1,16 @@
+.gbbc-form {
+    position: relative;
+  }
+  
+.gbbc-input {
+    width: 50%;
+    padding-right: 40px;
+  }
+  
+.gbbc-btn {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+  }

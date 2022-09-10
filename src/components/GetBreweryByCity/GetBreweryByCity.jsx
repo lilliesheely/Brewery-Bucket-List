@@ -1,5 +1,6 @@
 import { useState } from 'react'; 
 import BreweryByCityCard from '../BreweryByCityCard/BreweryByCityCard';
+import './GetBreweryByCity.css'
 
 export default function GetBreweryByCity({ getBreweryByCity, breweryByCity, addBrewery }) {
     const [newCity, setNewCity] = useState('')
@@ -16,14 +17,15 @@ export default function GetBreweryByCity({ getBreweryByCity, breweryByCity, addB
     const cityBreweries = breweryByCity.map((b, idx) => <BreweryByCityCard brews={b} key={idx} addBrewery={addBrewery}/> )
     return (
         <>
-        <form onSubmit={handleSubmit}>
+        <form className='gbbc-form' onSubmit={handleSubmit}>
             <label>Search by City</label>
             <input 
             type='text'
             value={newCity} 
             onChange={handleChange} 
+            className='gbbc-input'
             />
-            <button type='submit'>Search</button>
+            <button className='gbbc-btn' type='submit'>Search</button>
         </form>
         {cityBreweries}
         </>

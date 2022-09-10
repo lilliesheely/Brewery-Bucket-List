@@ -5,7 +5,7 @@ export default function GetRandomBrewery({ getRandomBrewery, randomBrewery, addB
         
   return (
     <>
-      <button onClick={getRandomBrewery}>Generate New Random Brewery</button>
+      <button onClick={getRandomBrewery}>Get Random Brewery</button>
       {ranBreweries}
     </>
     )}

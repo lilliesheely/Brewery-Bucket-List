@@ -20,6 +20,8 @@ export default function BucketListPage({breweries, setBreweries}) {
   async function visitedBrewery(id) {
     const visited = await breweriesAPI.updateBeenTo(id);
     const updatedList = breweries.map(b => b._id === visited._id ? visited : b)
+    
+    console.log('visited', visited) 
     setBreweries(updatedList); 
   }
 
@@ -48,13 +50,14 @@ export default function BucketListPage({breweries, setBreweries}) {
       <div>
         <BucketListList breweries={breweries} visitedBrewery={visitedBrewery} deleteBrewery={deleteBrewery} /> 
       </div>
-      <div> 
+      <div> <span className='api-forms'></span>
         <GetRandomBrewery getRandomBrewery={getRandomBrewery} randomBrewery={randomBrewery} addBrewery={addBrewery} breweries={breweries} /> 
       </div>
       <div>
       </div>
       <div> 
        <GetBreweryByCity getBreweryByCity={getBreweryByCity} breweryByCity={breweryByCity} addBrewery={addBrewery}/>
+      
       </div>
     </section>
     </>  

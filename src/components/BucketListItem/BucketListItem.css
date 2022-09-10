@@ -1,0 +1,17 @@
+.bll-table {
+  display: grid;
+  grid-template-columns: 8vmin 20vmin 10vmin 15vmin 8vmin;  
+  align-items: center;
+}
+
+.bll-btn::before {
+    content: '🔲';
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.bll-btn:hover:before {
+  content: '✔️';
+    background-color: transparent;
+    border-color: transparent;
+}
