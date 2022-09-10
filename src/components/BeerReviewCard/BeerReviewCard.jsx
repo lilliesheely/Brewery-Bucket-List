@@ -5,7 +5,6 @@ export default function BeerReviewCard({ brewery }) {
     
     return (
         <>
-            <h1>Reviews: </h1>  
             {allReviews}
         </>
     )

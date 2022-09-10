@@ -19,10 +19,9 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
     return (
         <>
         <h1>{brewery.name}</h1> 
-        <h1>{brewery.breweryType}</h1> 
-        <h1>{brewery.address}</h1> 
-        <h1>{brewery.city}</h1> 
-        <h1>{brewery.state}</h1> 
+        <hp><i>{brewery.breweryType}</i></hp> 
+        <p>{brewery.address}</p> 
+        <p>{brewery.city}, {brewery.state}</p> 
         <BreweryReviewForm  handleAddReview={handleAddReview}   /> 
         <BeerReviewsList breweries={breweries} /> 
        </>

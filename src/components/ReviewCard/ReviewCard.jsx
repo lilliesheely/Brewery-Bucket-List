@@ -2,10 +2,16 @@ export default function ReviewCard({ review }) {
     return (
         <>
         <div>
-            <h3>{review.rating}</h3>
-            <h3>{review.beerName}</h3>
-            <h3>{review.style}</h3>
-            <h3>{review.notes}</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>{review.rating}</td>
+                        <td>{review.beerName}</td>
+                        <td>{review.style}</td>
+                        <td>{review.notes}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         </>
     )
