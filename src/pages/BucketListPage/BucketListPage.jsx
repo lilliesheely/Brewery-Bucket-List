@@ -54,7 +54,7 @@ export default function BucketListPage({breweries, setBreweries}) {
       <div>
       </div>
       <div> 
-       <GetBreweryByCity getBreweryByCity={getBreweryByCity} setBreweryByCity={setBreweryByCity} />
+       <GetBreweryByCity getBreweryByCity={getBreweryByCity} breweryByCity={breweryByCity} addBrewery={addBrewery}/>
       </div>
     </section>
     </>  

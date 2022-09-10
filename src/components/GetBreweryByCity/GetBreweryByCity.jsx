@@ -1,9 +1,9 @@
 import { useState } from 'react'; 
+import BreweryByCityCard from '../BreweryByCityCard/BreweryByCityCard';
 
-export default function GetBreweryByCity({ getBreweryByCity }) {
+export default function GetBreweryByCity({ getBreweryByCity, breweryByCity, addBrewery }) {
     const [newCity, setNewCity] = useState('')
     
-
     async function handleSubmit(evt) {
         evt.preventDefault()
         getBreweryByCity(newCity); 
@@ -13,8 +13,9 @@ export default function GetBreweryByCity({ getBreweryByCity }) {
     async function handleChange(evt) {
         setNewCity(evt.target.value)
     }
-
+    const cityBreweries = breweryByCity.map((b, idx) => <BreweryByCityCard brews={b} key={idx} addBrewery={addBrewery}/> )
     return (
+        <>
         <form onSubmit={handleSubmit}>
             <label>Search by City</label>
             <input 
@@ -24,5 +25,7 @@ export default function GetBreweryByCity({ getBreweryByCity }) {
             />
             <button type='submit'>Search</button>
         </form>
+        {cityBreweries}
+        </>
     )
 }
