@@ -44,6 +44,7 @@ export default function BucketListPage({breweries, setBreweries}) {
   return (
     <>
       <section className='bucketListPage'>
+        <h1 className='bl-h1'>Find your dream</h1>
         <div className='blf-div'>
           <BucketListForm  addBrewery={ addBrewery }/>
         </div>
