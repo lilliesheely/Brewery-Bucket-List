@@ -7,6 +7,7 @@ import HomePage from '../HomePage/HomePage';
 import BreweryDetailPage from '../BreweryDetailPage/BreweryDetailPage'
 import BreweriesPage from '../BreweriesPage/BreweriesPage';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 
@@ -35,6 +36,7 @@ export default function App() {
             <Route path='/:breweryName' element={<BreweryDetailPage breweries={breweries} setBreweries={setBreweries}  />} />
             <Route path='/all' element={<BreweriesPage breweries={breweries} setBreweries={setBreweries}  />} />
           </Routes>
+          <Footer />
         </>
         :
         <AuthPage setUser={setUser} />

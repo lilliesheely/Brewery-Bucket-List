@@ -148,7 +148,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: rgb(232, 209, 174);
+  background-color: navy; 
 }
 
 button[type="submit"] {

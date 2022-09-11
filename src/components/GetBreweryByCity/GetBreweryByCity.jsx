@@ -24,6 +24,7 @@ export default function GetBreweryByCity({ getBreweryByCity, breweryByCity, addB
             onChange={handleChange} 
             className='gbbc-input'
             placeholder='ie. Phoenix'
+            required
             />
             <button className='gbbc-btn' type='submit'>Search by City</button>
         </form>
