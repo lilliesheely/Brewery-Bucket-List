@@ -3,8 +3,11 @@
     grid-template-columns: 400px 400px;
     justify-content: center;
     gap: 75px;
-    background-color: lightsalmon;
-    height: 75vh;
+    background-color: #fce183;
+    background-image: url('https://i.imgur.com/6V6Ai9q.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
 }
 
 h1 {
@@ -19,4 +22,9 @@ h1 {
 .bl-h2 {
     margin-top: 25px; 
     margin-bottom: -5px;
+    margin-top: 70vh;
+}
+
+.breweryForm {
+    margin-top: 70vh;
 }
