@@ -10,3 +10,29 @@
     
 }
 
+.gbbc-table {
+       table-layout: fixed;
+       width: 100%;
+       height: 90px;
+       border-collapse: collapse;
+       margin: 5px;
+       color: navy;
+       display: flex; 
+       justify-content: center;
+       align-content: center;
+       align-items: center;
+       padding: 5px; 
+   }
+   
+.gbbCard {
+       display: grid;
+       grid-template-columns: 15vmin 8vmin 15vmin 7vmin 3vmin;  
+       border-bottom: 1px solid grey;
+       align-items: center;
+       gap: 1px;
+   }
+   
+.gbbCardCom { 
+       display: grid;
+       justify-content: center;
+}

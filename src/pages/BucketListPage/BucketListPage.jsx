@@ -43,23 +43,20 @@ export default function BucketListPage({breweries, setBreweries}) {
 
   return (
     <>
-    <section className='bucketListPage'>
-      <div>
-        <BucketListForm  addBrewery={ addBrewery }/>
-      </div>
-      <div>
-        <BucketListList breweries={breweries} visitedBrewery={visitedBrewery} deleteBrewery={deleteBrewery} /> 
-      </div>
-      <div> <span className='api-forms'></span>
-        <GetRandomBrewery getRandomBrewery={getRandomBrewery} randomBrewery={randomBrewery} addBrewery={addBrewery} breweries={breweries} /> 
-      </div>
-      <div>
-      </div>
-      <div> 
-       <GetBreweryByCity getBreweryByCity={getBreweryByCity} breweryByCity={breweryByCity} addBrewery={addBrewery}/>
-      
-      </div>
-    </section>
+      <section className='bucketListPage'>
+        <div className='blf-div'>
+          <BucketListForm  addBrewery={ addBrewery }/>
+        </div>
+        <div className='blf-div'>
+          <BucketListList breweries={breweries} visitedBrewery={visitedBrewery} deleteBrewery={deleteBrewery} /> 
+        </div>
+        <div className='blf-div'> 
+        <GetBreweryByCity getBreweryByCity={getBreweryByCity} breweryByCity={breweryByCity} addBrewery={addBrewery}/>
+        </div>
+        <div className='blf-div'> 
+          <GetRandomBrewery getRandomBrewery={getRandomBrewery} randomBrewery={randomBrewery} addBrewery={addBrewery} breweries={breweries} /> 
+        </div>
+      </section>
     </>  
   );
 }

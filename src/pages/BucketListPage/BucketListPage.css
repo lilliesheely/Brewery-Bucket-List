@@ -2,10 +2,21 @@
     display: grid;
     grid-template-columns: 400px 400px;
     justify-content: center;
-    gap: 50px;
+    gap: 75px;
+    background-color: lightsalmon;
+    height: 75vh;
 }
 
 h1 {
     display: grid;
     grid-column: span 2;
+}
+
+.blf-div {
+    margin: auto;
+}
+
+.bl-h2 {
+    margin-top: 25px; 
+    margin-bottom: -5px;
 }

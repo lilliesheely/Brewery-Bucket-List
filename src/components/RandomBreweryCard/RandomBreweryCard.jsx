@@ -15,16 +15,15 @@ export default function RandomBreweryCard({brewery, addBrewery}){
         addBrewery(newBrewery); 
    }
     return(
-        <div>
+        <div className='randomBreweriesCardCom'>
             <table>
             
                 <tbody>
-                    <tr>
-                        <td>{brewery.name} </td>
-                        <td><i>{brewery.brewery_type} </i></td>
-                        <td>{brewery.city}</td>
-                        <td>{brewery.state}</td>
-                        <td>{brewery.website_url ?  <a href={brewery.website_url} target='_blank' className='RBC-atag'>Website</a> : 'No website available'}</td> 
+                    <tr className='randomBreweriesCard'>
+                        <td className='rbc-table'><h4>{brewery.name}</h4></td>
+                        <td className='rbc-table'><i>{brewery.brewery_type} </i></td>
+                        <td className='rbc-table'>{brewery.city}, {brewery.state} </td>
+                        <td className='rbc-table'>{brewery.website_url ?  <a href={brewery.website_url} target='_blank' className='RBC-atag'>Website</a> : 'No website available'}</td> 
                         <td>
                             <form onSubmit={handleSubmit}>
                                 <input type='hidden' 

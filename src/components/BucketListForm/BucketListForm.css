@@ -1,3 +1,32 @@
 .breweryForm {
-    background-color: white; 
+        display: grid;
+        grid-template-columns: 110px 150px;
+        gap: 1vmin;
+        color: var(--text-light);
+        width: 350px; 
+        font-size: 4px; 
+        padding: 3vmin;
+        background-color: white; 
+        border: .1vmin solid var(--tan-3);
+        border-radius: 1vmin;
+        margin-top: 60px;
+}
+
+.blbutton { 
+    grid-column: span 2;
+    background-color: navy;
+    width: 200px; 
+    font-size: 15px; 
+}
+
+.blFormInput {
+    color: navy;
+    font-size: 15px; 
+    text-align: left;
+}
+
+.blFormLabel {
+    color: grey;
+    font-size: 15px; 
+    
 }

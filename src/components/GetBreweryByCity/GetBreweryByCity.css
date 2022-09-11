@@ -1,16 +1,18 @@
 .gbbc-form {
-    position: relative;
-  }
+    display: grid;
+    grid-template-columns: 180px 180px;
+    grid-auto-flow: column;
+}
   
 .gbbc-input {
-    width: 50%;
-    padding-right: 40px;
+    width: 170px;
+    height: 45px;
+    color: grey; 
   }
   
 .gbbc-btn {
-    width: 30%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    
+    background-color: navy;
+    width: 140px; 
+    height: 45px;
+    font-size: 15px; 
   }

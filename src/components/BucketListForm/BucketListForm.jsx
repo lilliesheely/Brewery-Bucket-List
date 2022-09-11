@@ -29,46 +29,49 @@ export default function BucketListForm({ addBrewery }) {
     }
     return (
         <>
-            <h1>Add Brewery to Bucket List!</h1>
             <form onSubmit={handleSubmit} className='breweryForm'>
-                <label>Brewery Name</label>
+                <label className='blFormLabel'>Brewery Name</label>
                 <input
                     name='name'
                     value={newBrewery.name}
                     onChange={handleChange}
-                    placeholder='Brewery Name'
                     type='text'
+                    className='blFormInput'
                 />
-                <label>Type</label>
+                <label className='blFormLabel'>Type</label>
                 <input
                     name='breweryType'
                     value={newBrewery.breweryType}
                     onChange={handleChange}
-                    placeholder='ie: Micro, brewpub, taproom, etc.'
+                    placeholder='ie: micro, brewpub'
                     type='text'
+                    className='blFormInput'
                 />  
-                <label>Address</label>
+                <label className='blFormLabel'>Address</label>
                 <input 
                     type='text' 
                     value={newBrewery.address}
                     name='address'
                     onChange={handleChange}
+                    className='blFormInput'
                 />
-                <label>City</label>
+                <label className='blFormLabel'>City</label>
                 <input 
                     type='text' 
                     value={newBrewery.city}
                     name='city'
                     onChange={handleChange}
+                    className='blFormInput'
                 />
-                <label>State</label>
+                <label className='blFormLabel'>State</label>
                 <input 
                     type='text' 
                     name='state'
                     value={newBrewery.state}
                     onChange={handleChange}
+                    className='blFormInput'
                 />
-                <button type='submit'>ADD BREWERY</button>
+                <button className='blbutton' type='submit'>ADD BREWERY TO BUCKET LIST</button>
             </form>
         </>
     )

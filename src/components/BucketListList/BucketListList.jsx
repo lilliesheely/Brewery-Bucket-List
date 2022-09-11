@@ -7,7 +7,7 @@ export default function BucketListList({ breweries, visitedBrewery, deleteBrewer
     )
     return (
         <>
-            <h2>Bucket List</h2>
+            <h2 className='bl-h2'>Bucket List</h2>
             {allBreweries}
         </>
     )

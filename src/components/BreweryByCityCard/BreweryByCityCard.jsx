@@ -21,13 +21,12 @@ export default function BreweryByCityCard({ brews, addBrewery }){
         <table>
             
                 <tbody>
-                    <tr>
-                        <td><h4>{brews.name}</h4> </td>
-                        <td><i>{brews.brewery_type}</i></td>
-                        <td>{brews.city}</td>
-                        <td>{brews.state}</td>
-                        <td>{brews.website_url ?  <a href={brews.website_url} target='_blank' className='RBC-atag'>Website</a> : 'No website available'}</td> 
-                        <td>
+                    <tr className='gbbCard'>
+                        <td className='gbbc-table'><h4>{brews.name}</h4> </td>
+                        <td className='gbbc-table'><i>{brews.brewery_type}</i></td>
+                        <td className='gbbc-table'>{brews.city}, {brews.state}</td>
+                        <td className='gbbc-table'>{brews.website_url ?  <a href={brews.website_url} target='_blank' className='RBC-atag'>Website</a> : 'No website available'}</td> 
+                        <td className='gbbc-table'>
                             <form onSubmit={handleSubmit}>
                                 <input type='hidden' 
                                     value={brews.name}

@@ -17,15 +17,15 @@ export default function GetBreweryByCity({ getBreweryByCity, breweryByCity, addB
     const cityBreweries = breweryByCity.map((b, idx) => <BreweryByCityCard brews={b} key={idx} addBrewery={addBrewery}/> )
     return (
         <>
-        <form className='gbbc-form' onSubmit={handleSubmit}>
-            <label>Search by City</label>
+        <form onSubmit={handleSubmit} className='gbbc-form'>
             <input 
             type='text'
             value={newCity} 
             onChange={handleChange} 
             className='gbbc-input'
+            placeholder='ie. Phoenix'
             />
-            <button className='gbbc-btn' type='submit'>Search</button>
+            <button className='gbbc-btn' type='submit'>Search by City</button>
         </form>
         {cityBreweries}
         </>
