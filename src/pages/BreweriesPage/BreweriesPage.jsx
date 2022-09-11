@@ -8,6 +8,7 @@ export default function BreweriesPage({ breweries }){
         <div className='breweriesPage'></div>
             <h1>Been there, drank that!</h1>
             {breweryInd}
+            
         </>
     )
 }

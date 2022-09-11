@@ -11,8 +11,7 @@ export default function BreweriesCard({ brewery }){
                         <tr className='breweriesCard'>
                             <td className='breweriesTable'>✔️</td>
                             <td className='breweriesTable'>{brewery.name}</td>
-                            <td className='breweriesTable'>{brewery.city}</td>
-                            <td className='breweriesTable'>{brewery.state}</td>
+                            <td className='breweriesTable'>{brewery.city}, {brewery.state}</td>
                             <Link 
                                 to={`/${brewery.name}`} 
                                 className='bc-link'
