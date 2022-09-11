@@ -3,25 +3,27 @@ import './BreweriesCard.css'
 export default function BreweriesCard({ brewery }){
     return (
         <>
-        <div >
-            <Link 
-                to={`/${brewery.name}`} 
-                className='bc-link'
-            > 
+        <div className='breweriesCardCom' >
                 {brewery.beenTo === true ?
 
                 <table>
                     <tbody>
-                        <tr>
-                            <td>✔️</td>
-                            <td>{brewery.name}</td>
-                            <td>{brewery.city}</td>
-                            <td>{brewery.state}</td>
+                        <tr className='breweriesCard'>
+                            <td className='breweriesTable'>✔️</td>
+                            <td className='breweriesTable'>{brewery.name}</td>
+                            <td className='breweriesTable'>{brewery.city}</td>
+                            <td className='breweriesTable'>{brewery.state}</td>
+                            <Link 
+                                to={`/${brewery.name}`} 
+                                className='bc-link'
+                            >
+                                <td className='breweriesTable' id='bDetails'>Brewery Details</td>   
+                            </Link>
                         </tr>
                     </tbody>
                 </table>
                 :  ''} 
-            </Link>
+         
             </div>
         </>
     )

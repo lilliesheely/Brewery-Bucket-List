@@ -1,8 +1,40 @@
-.BreweriesCard {
+.breweriesCardCom {
+    display: grid;
     justify-content: center;
-    text-align: center;
+}
+.bc-link {
+    text-decoration: none;
+    color: red;
 }
 
-.bc-link {
-text-decoration: none;
+.breweriesCard {
+    display: grid;
+    grid-template-columns: 15vmin 20vmin 10vmin 15vmin 20vmin;  
+    align-items: center;
+}
+
+.breweriesTable {
+    table-layout: fixed;
+    width: 100%;
+    height: 40px;
+    border-collapse: collapse;
+    border-top: 1px solid grey;
+    margin: 5px;
+    color: navy;
+    display: flex; 
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5px; 
+}
+
+#bDetails {
+    color: red;
+}
+
+
+
+
+th {
+    color: orange; 
 }

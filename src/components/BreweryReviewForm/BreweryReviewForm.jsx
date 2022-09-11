@@ -27,7 +27,7 @@ export default function BreweryReviewForm({ handleAddReview }){
     return(
         <div className='brfPage'>
         <form className='reviewForm' onSubmit={handleSubmit} >
-            <label className='reviewForminput'>Rating</label>
+            <label className='reviewFormLabel'>Rating</label>
             <select
                 name='rating'
                 value={newReview.rating} 
@@ -39,7 +39,7 @@ export default function BreweryReviewForm({ handleAddReview }){
             <option value={4}>🍺 🍺 🍺 🍺</option>
             <option value={5}>🍺 🍺 🍺 🍺 🍺 </option>
             </select>
-            <label className='reviewForminput'>Name of Beer</label>
+            <label className='reviewFormLabel'>Name of Beer</label>
             <input 
                 type='text' 
                 value={newReview.beerName} 
@@ -47,7 +47,7 @@ export default function BreweryReviewForm({ handleAddReview }){
                 onChange={handleChange}
                 className='reviewForminput'
             />
-            <label className='reviewForminput'>Style</label>
+            <label className='reviewFormLabel'>Style</label>
             <input 
                 type='text'
                 value={newReview.style} 
@@ -55,7 +55,7 @@ export default function BreweryReviewForm({ handleAddReview }){
                 onChange={handleChange}
                 className='reviewForminput'
             />
-            <label className='reviewForminput'>Review</label>
+            <label className='reviewFormLabel'>Review</label>
             <input 
                 type='text'
                 value={newReview.notes}
