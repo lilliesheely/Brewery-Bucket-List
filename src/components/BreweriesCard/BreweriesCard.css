@@ -1,6 +1,7 @@
 .breweriesCardCom {
     display: grid;
     justify-content: center;
+    
 }
 .bc-link {
     text-decoration: none;
@@ -9,7 +10,7 @@
 
 .breweriesCard {
     display: grid;
-    grid-template-columns: 15vmin 20vmin 15vmin 20vmin;  
+    grid-template-columns:  40vmin 15vmin 20vmin;  
     align-items: center;
 }
 
@@ -21,17 +22,22 @@
     border-top: 1px solid grey;
     margin: 5px;
     color: navy;
-    display: flex; 
+    display: grid;
     justify-content: center;
     align-content: center;
     align-items: center;
-    padding: 5px; 
+    padding-top: 10px;
 }
 
 #bDetails {
-    color: red;
+    color: rgb(194, 104, 84);
 }
 
 th {
-    color: orange; 
+    color: navy;
+}
+
+
+#checkmark {
+    font-family: 'Shrikhand', cursive;
 }

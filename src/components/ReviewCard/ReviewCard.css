@@ -13,12 +13,10 @@
     table-layout: auto;
     width: 100%;
     border-collapse: collapse;
-    border-top: 1px solid grey;
+    border-top: 1px solid rgb(194, 104, 84);
     margin: 3px;
     color: navy;
+    display: grid; 
+    justify-content: center;
 }
 
-th {
-    color: orange; 
-
-}

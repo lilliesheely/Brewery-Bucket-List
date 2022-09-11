@@ -21,6 +21,7 @@ const brewerySchema = new Schema({
         type: Boolean, 
         default: false 
     },
+    website: String, 
     reviews: [reviewSchema],
     user: {type: Schema.Types.ObjectId, ref: "User"}, 
 }, {

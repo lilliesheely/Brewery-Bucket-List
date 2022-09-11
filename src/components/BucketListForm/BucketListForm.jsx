@@ -8,6 +8,7 @@ export default function BucketListForm({ addBrewery }) {
         address: '',
         city: '',
         state: '',
+        website: '',
         beenTo: false, 
     }) 
 
@@ -20,6 +21,7 @@ export default function BucketListForm({ addBrewery }) {
             address: '',
             city: '',
             state: '',
+            website: '',
             beenTo: false, 
         })
     }
@@ -71,7 +73,15 @@ export default function BucketListForm({ addBrewery }) {
                     onChange={handleChange}
                     className='blFormInput'
                 />
-                <button className='blbutton' type='submit'>ADD BREWERY TO BUCKET LIST</button>
+                <label className='blFormLabel'>Website</label>
+                <input 
+                    type='text' 
+                    name='website'
+                    value={newBrewery.website}
+                    onChange={handleChange}
+                    className='blFormInput'
+                />
+                <button className='blbutton' type='submit'>Add Brewery to Bucket List</button>
             </form>
         </>
     )

@@ -21,11 +21,22 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
         <>
         <section className='BreweryDetailPage'>
             <div className='bdp'>
-                <h1>{brewery.name}</h1> 
-                <hp><i>{brewery.breweryType}</i></hp> 
-                <p>{brewery.address}</p> 
-                <p>{brewery.city}, {brewery.state}</p> 
+                <h1 className='dp-h1'>{brewery.name}</h1> 
+                <p className='bdp-ptag'><i>{brewery.breweryType}</i></p> 
+                <p className='bdp-ptag'>{brewery.address}</p> 
+                <p className='bdp-ptag'>{brewery.city}, {brewery.state}</p> 
+                {brewery.website ? <a href={brewery.website} target='_blank'>Website</a> : ''}
                 <BreweryReviewForm  handleAddReview={handleAddReview} /> 
+                <table>
+                    <thead>
+                        <tr className='bdp-table'>
+                            <th className='bdp-row'>Rating</th>
+                            <th>Name of Beer</th>
+                            <th>Style</th>
+                            <th>Review</th>
+                        </tr>
+                    </thead>
+                </table>
                 <BeerReviewsList breweries={breweries} /> 
             </div>
         </section>

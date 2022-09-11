@@ -11,8 +11,8 @@ export default function BucketListItem({ brewery, visitedBrewery, deleteBrewery 
                         <td><button id='bll-btn' className="breweriesListTable" onClick={() => visitedBrewery(brewery._id)}></button></td>
                        
                             <td className="breweriesListTable"><h4>{brewery.name}</h4></td>
-                            <td className="breweriesListTable">{brewery.city}</td>
-                            <td className="breweriesListTable">{brewery.state}</td>
+                            <td className="breweriesListTable">{brewery.city}, {brewery.state}</td>
+                            <td>{brewery.website ? <a href="">Website</a> : '' }</td>
                             <Link 
                             to={`/${brewery.name}`} 
                             className='bl-link'

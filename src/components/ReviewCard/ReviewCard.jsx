@@ -20,14 +20,6 @@ export default function ReviewCard({ review }) {
         <>
         <div className='BeerReviewCard'>
             <table className='tableReview'>
-                <thead>
-                    <tr className='beerReviews'>
-                        <th>Rating</th>
-                        <th>Name of Beer</th>
-                        <th>Style of Beer</th>
-                        <th>Review</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr className='beerReviews'>
                         <td className='reviewTable'>{reviewRating}</td>

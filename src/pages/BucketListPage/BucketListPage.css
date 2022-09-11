@@ -4,15 +4,9 @@
     justify-content: center;
     gap: 75px;
     background-color: #fce183;
-    background-image: url('https://i.imgur.com/wsuA4uF.png');
+    background-image: url('https://i.imgur.com/eLTj2do.png');
     background-repeat: no-repeat;
-    background-size: contain;
-    
-}
-
-h1 {
-    display: grid;
-    grid-column: span 2;
+    background-size: contain;   
 }
 
 .blf-div {
@@ -20,20 +14,24 @@ h1 {
 }
 
 .bl-h2 {
-    margin-top: 25px; 
     margin-bottom: -5px;
-    margin-top: 70vh;
     font-family: 'Shrikhand', cursive;
-    color: #002554;
+    margin-top: 95vh; 
+    color: navy;
 }
 
 .breweryForm {
-    margin-top: 70vh;
+    margin-top: 95vh;
 }
 
-.bl-h1 {
-    font-size: 5vmin;
-    padding-top: 8vmin;
-    padding-top: none;
-    margin-top: none;
+.bl-h1 { 
+    display: grid;
+    grid-column: span 2;
+    padding-top: 6%;
+    margin-top: 80px;
+    color: navy; 
+    font-family: 'Shrikhand', cursive;
+    font-size: 50px;
+    margin-bottom: -80px;
 }
+

@@ -8,6 +8,8 @@
     font-size: 14px;
     color: navy; 
     font-family: 'Shrikhand', cursive;
+    position: fixed;
+    width: 100%;
 }
 
 a {
@@ -17,6 +19,5 @@ a {
 }
 
 .navBar-End {
-
     text-align: right;
 }

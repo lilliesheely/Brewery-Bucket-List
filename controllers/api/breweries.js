@@ -51,7 +51,7 @@ async function deleteBrewery(req, res) {
 
 async function breweryByCity(req, res) {
   console.log(req.params.city, 'city')
-  let breweriesByCity = await fetch(`https://api.openbrewerydb.org/breweries?by_city=${req.params.city}&per_page=3`)
+  let breweriesByCity = await fetch(`https://api.openbrewerydb.org/breweries?by_city=${req.params.city}&per_page=5`)
     .then((response) => response.json())
     console.log(breweriesByCity, "list of breweries by city")
   res.json(breweriesByCity)

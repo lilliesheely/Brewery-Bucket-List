@@ -6,8 +6,9 @@ export default function BreweriesPage({ breweries }){
     return (
         <>
         <div className='breweriesPage'></div>
-            <h1>Been there, drank that!</h1>
-            {breweryInd}
+            <h1 className='bp-h1'>Been there, drank that!</h1>
+            <div className='bp-gif'></div> 
+           {breweryInd}
             
         </>
     )
