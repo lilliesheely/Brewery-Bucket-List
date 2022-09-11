@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import BreweryReviewForm from '../../components/BreweryReviewForm/BreweryReviewForm'; 
 import BeerReviewsList from '../../components/BeerReviewsList/BeerReviewsList'; 
 import * as reviewsAPI from '../../utilities/reviews-api';
+import './BreweryDetailPage.css'
 
 export default function BreweryDetailPage({ breweries, setBreweries }){
     const { breweryName } = useParams()
@@ -18,12 +19,16 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
 
     return (
         <>
-        <h1>{brewery.name}</h1> 
-        <hp><i>{brewery.breweryType}</i></hp> 
-        <p>{brewery.address}</p> 
-        <p>{brewery.city}, {brewery.state}</p> 
-        <BreweryReviewForm  handleAddReview={handleAddReview}   /> 
-        <BeerReviewsList breweries={breweries} /> 
+        <section className='BreweryDetailPage'>
+            <div className='bdp'>
+                <h1>{brewery.name}</h1> 
+                <hp><i>{brewery.breweryType}</i></hp> 
+                <p>{brewery.address}</p> 
+                <p>{brewery.city}, {brewery.state}</p> 
+                <BreweryReviewForm  handleAddReview={handleAddReview} /> 
+                <BeerReviewsList breweries={breweries} /> 
+            </div>
+        </section>
        </>
     )
 }

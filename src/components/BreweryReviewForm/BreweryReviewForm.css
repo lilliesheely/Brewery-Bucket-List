@@ -1,0 +1,30 @@
+.reviewForm {
+    display: grid;
+    grid-template-columns: 110px 150px;
+    gap: 1vmin;
+    color: var(--text-light);
+    width: 325px; 
+    font-size: 4px; 
+    padding: 3vmin;
+    background-color: white; 
+    border: .1vmin solid var(--tan-3);
+    border-radius: 1vmin;
+}
+
+.brfPage {
+    padding: 20px; 
+    display: grid;
+    justify-content: center;
+}
+
+.brf-btn {
+    grid-column: span 2;
+    background-color: navy;
+    width: 90px; 
+    font-size: 15px; 
+}
+
+.reviewForminput {
+    color: navy;
+    font-size: 15px; 
+}

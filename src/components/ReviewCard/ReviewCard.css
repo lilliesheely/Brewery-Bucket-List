@@ -1,0 +1,18 @@
+.BeerReviewCard {
+    display: grid;
+    justify-content: center;
+}
+
+.beerReviews { 
+    display: grid;
+    grid-template-columns: 15vmin 20vmin 10vmin 15vmin;  
+    align-items: center;
+}
+
+.tableReview {  
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 1px solid grey;
+    margin: 3px;
+}

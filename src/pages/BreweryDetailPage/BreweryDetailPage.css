@@ -1,0 +1,17 @@
+.BreweryDetailPage{ 
+    background-color: #fce183;
+    height: 150vh;
+    display: grid;
+    justify-content: center;
+    color: #152238
+}
+
+.bdp {
+    width: 500px; 
+    margin-right: none;
+    color: #152238
+}
+
+h1 {
+    color: #192841; 
+}

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from 'react'; 
+import './BreweryReviewForm.css'
 
 export default function BreweryReviewForm({ handleAddReview }){
     const [newReview, setNewReview] = useState ({ 
@@ -24,8 +25,9 @@ export default function BreweryReviewForm({ handleAddReview }){
     }
  
     return(
-        <form onSubmit={handleSubmit}>
-            <label>Rating</label>
+        <div className='brfPage'>
+        <form className='reviewForm' onSubmit={handleSubmit} >
+            <label className='reviewForminput'>Rating</label>
             <select
                 name='rating'
                 value={newReview.rating} 
@@ -37,28 +39,32 @@ export default function BreweryReviewForm({ handleAddReview }){
             <option value={4}>🍺 🍺 🍺 🍺</option>
             <option value={5}>🍺 🍺 🍺 🍺 🍺 </option>
             </select>
-            <label >Name</label>
+            <label className='reviewForminput'>Name of Beer</label>
             <input 
                 type='text' 
                 value={newReview.beerName} 
                 name='beerName'
                 onChange={handleChange}
+                className='reviewForminput'
             />
-            <label>Style</label>
+            <label className='reviewForminput'>Style</label>
             <input 
                 type='text'
                 value={newReview.style} 
                 name='style'
                 onChange={handleChange}
+                className='reviewForminput'
             />
-            <label>Review Notes</label>
+            <label className='reviewForminput'>Review</label>
             <input 
                 type='text'
                 value={newReview.notes}
                 name='notes'
                 onChange={handleChange}
-            />
-            <button type='submit'>Add Beer Review</button>
+                className='reviewForminput'
+            /> 
+            <button type='submit' className='brf-btn'>Add Beer Review</button>
         </form>
+        </div>
     )
 }
