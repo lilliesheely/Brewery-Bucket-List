@@ -9,7 +9,7 @@ export default function BreweriesCard({ brewery }){
                         <tbody>
                             <tr className='breweriesCard'>
                                 
-                                {/* <td className='breweriesTable' id='checkmark'><img src="https://i.imgur.com/fNe72bZ.png" alt="" /></td> */}
+                                <td className='breweriesTable'><img src="https://i.imgur.com/iazwr0w.png" alt="" /></td>
                                 <td className='breweriesTable'><b>{brewery.name}</b></td>
                                 <td className='breweriesTable'>{brewery.city}, {brewery.state}</td>
                                 <Link 

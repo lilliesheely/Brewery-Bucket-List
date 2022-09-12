@@ -26,7 +26,7 @@
    
 .gbbCard {
        display: grid;
-       grid-template-columns: 15vmin 8vmin 15vmin 7vmin 3vmin;  
+       grid-template-columns: 15vmin 18vmin 9vmin 6vmin;  
        border-bottom: 1px solid grey;
        align-items: center;
        gap: 1px;

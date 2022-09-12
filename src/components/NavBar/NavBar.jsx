@@ -11,7 +11,7 @@ export default function NavBar({user, setUser}) {
     <nav className='navBar'>
       Welcome, {user.name}! &nbsp;
       <Link to='/bucketlist'>BUCKETLIST</Link>
-      <div><img src="https://i.imgur.com/Ztg6TjJ.png" alt="" /></div>
+      <div><img src="https://i.imgur.com/RBb82T2.gif" alt="" /></div>
       <Link to='/all'>BREWERIES</Link>
       <div>
       <Link to='' onClick={handleLogOut} >Log Out</Link>

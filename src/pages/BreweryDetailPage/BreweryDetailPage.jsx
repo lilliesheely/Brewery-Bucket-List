@@ -25,7 +25,9 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
                 <p className='bdp-ptag'><i>{brewery.breweryType}</i></p> 
                 <p className='bdp-ptag'>{brewery.address}</p> 
                 <p className='bdp-ptag'>{brewery.city}, {brewery.state}</p> 
-                {brewery.website ? <a href={brewery.website} target='_blank'>Website</a> : ''}
+                {brewery.website ? <a href={brewery.website} target="_blank">
+                    <img src="https://i.imgur.com/JLg6QnE.png" alt="" />
+                    </a> : ''}
                 <BreweryReviewForm  handleAddReview={handleAddReview} /> 
                 <table>
                     <thead>

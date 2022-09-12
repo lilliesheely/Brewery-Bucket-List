@@ -12,14 +12,14 @@ export default function BucketListItem({ brewery, visitedBrewery, deleteBrewery 
                        
                             <td className="breweriesListTable"><h4>{brewery.name}</h4></td>
                             <td className="breweriesListTable">{brewery.city}, {brewery.state}</td>
-                            <td>{brewery.website ? <a href=""><img src="https://i.imgur.com/JLg6QnE.png" alt="" /></a> : '' }</td>
+                            <td>{brewery.website ? <a href={brewery.website} target="_blank"><img src="https://i.imgur.com/JLg6QnE.png" alt="" /></a> : '' }</td>
                             <Link 
                             to={`/${brewery.name}`} 
                             className='bl-link'
                             >
                                 <td className="breweriesListTable">Brewery Details </td>        
                             </Link>
-                        <td><button  className="breweriesListTable" id='deleteBrewery' onClick={() => deleteBrewery(brewery._id)}>❌</button></td>
+                        <td><button  className="breweriesListTable" id='deleteBrewery' onClick={() => deleteBrewery(brewery._id)}>X</button></td>
                     </tr>
                 </tbody>
                 

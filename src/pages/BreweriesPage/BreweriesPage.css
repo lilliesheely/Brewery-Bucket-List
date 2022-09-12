@@ -2,15 +2,16 @@
     margin-top: -50px;
     background-color: #f26e43;
     width: 500px;
+    
 }
 
 .bp-gif {
     background-image: url('https://media.giphy.com/media/nBqsei9DoFjyOfAnlH/giphy.gif');
     background-position: center;
     background-repeat: no-repeat;
-    height: 35vmin;
+    height: 42vmin;
     mix-blend-mode: overlay; 
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     margin-top: 20px;
     border: none;
 }
@@ -21,4 +22,10 @@
     font-size: 70px;
     padding-top: 150px;
     margin-bottom: -100px;
+}
+
+.bp-container {
+    padding-bottom: 110px;
+    background-color: rgb(247, 222, 182);  
+    height: 100%
 }

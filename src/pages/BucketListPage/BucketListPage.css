@@ -6,22 +6,23 @@
     background-color: #fce183;
     background-image: url('https://i.imgur.com/eLTj2do.png');
     background-repeat: no-repeat;
-    background-size: contain;   
+    background-size: contain;  
+    margin-bottom: 30px; 
 }
 
 .blf-div {
-    margin: auto;
+    margin-bottom: 15px;
 }
 
 .bl-h2 {
     margin-bottom: -5px;
     font-family: 'Shrikhand', cursive;
-    margin-top: 95vh; 
+    /* margin-top: 95vh;  */
     color: navy;
 }
 
 .breweryForm {
-    margin-top: 95vh;
+    /* margin-top: 95vh; */
 }
 
 .bl-h1 { 
@@ -35,3 +36,9 @@
     margin-bottom: -80px;
 }
 
+.bl-gif {
+    margin-top: 100vh;
+    margin-left: -60vmin;
+    margin-right: -39vmin;
+  
+}

@@ -10,7 +10,7 @@
 
 .breweriesCard {
     display: grid;
-    grid-template-columns:  40vmin 15vmin 20vmin;  
+    grid-template-columns:  10vmin 40vmin 15vmin 20vmin;  
     align-items: center;
 }
 

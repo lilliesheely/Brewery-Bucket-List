@@ -1,20 +1,20 @@
 .bll-table {
   display: grid;
-  grid-template-columns: 4vmin 10vmin 10vmin 10vmin 10vmin 4vmin;  
+  grid-template-columns: 4vmin 10vmin 10vmin 10vmin 10vmin 6vmin;  
   align-items: center;
   gap: 0;
   border-bottom: 1px solid grey;
 }
 
 #bll-btn::before {
-    content: '🔲';
+    content: url('https://i.imgur.com/1cm2p2N.png');
     background-color: transparent;
     border-color: transparent;
     border-radius: 0;
 }
 
 #bll-btn:hover:before {
-  content: '✔️';
+  content: url('https://i.imgur.com/iazwr0w.png');
   background-color: transparent;
   border-color: transparent;
   border-radius: 0;
@@ -23,7 +23,6 @@
 .bl-link{ 
   color: navy; 
   text-decoration: none;
-  
 }
 
 .breweriesCardCom {
@@ -36,7 +35,6 @@
   text-decoration: none;
   color: red;
   border-radius: 0;
-  
 }
 
 .breweriesListTable {
@@ -51,6 +49,8 @@
   border-radius: 0;
 }
 
-.deleteBrewery {
+#deleteBrewery {
   border-radius: 0;
+  color: rgb(194, 104, 84);
+  font-size: 20px;
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'; 
-import * as breweriesAPI from "../../utilities/breweries-api"
+import * as breweriesAPI from '../../utilities/breweries-api'
 import BucketListList   from '../../components/BucketListList/BucketListList';
 import BucketListForm   from '../../components/BucketListForm/BucketListForm';
 import GetRandomBrewery from '../../components/GetRandomBrewery/GetRandomBrewery';
@@ -44,7 +44,9 @@ export default function BucketListPage({breweries, setBreweries}) {
   return (
     <>
       <section className='bucketListPage'>
-        <h1 className='bl-h1'>Find your dream</h1>      
+        <h1 className='bl-h1'>Find your favorite</h1>  
+        <img className='bl-gif' src='https://i.imgur.com/1gKm2cs.gif' alt='' />    
+        <div></div>
         <div className='blf-div'>
           <BucketListForm  addBrewery={ addBrewery }/>
         </div>
@@ -52,7 +54,7 @@ export default function BucketListPage({breweries, setBreweries}) {
           <BucketListList breweries={breweries} visitedBrewery={visitedBrewery} deleteBrewery={deleteBrewery} /> 
         </div>
         <div className='blf-div'> 
-        <GetBreweryByCity getBreweryByCity={getBreweryByCity} breweryByCity={breweryByCity} addBrewery={addBrewery}/>
+          <GetBreweryByCity getBreweryByCity={getBreweryByCity} breweryByCity={breweryByCity} addBrewery={addBrewery}/>
         </div>
         <div className='blf-div'> 
           <GetRandomBrewery getRandomBrewery={getRandomBrewery} randomBrewery={randomBrewery} addBrewery={addBrewery} breweries={breweries} /> 

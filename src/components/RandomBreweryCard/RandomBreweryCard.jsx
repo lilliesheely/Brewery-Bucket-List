@@ -21,9 +21,9 @@ export default function RandomBreweryCard({brewery, addBrewery}){
                 <tbody>
                     <tr className='randomBreweriesCard'>
                         <td className='rbc-table'><h4>{brewery.name}</h4></td>
-                        <td className='rbc-table'><i>{brewery.brewery_type} </i></td>
                         <td className='rbc-table'>{brewery.city}, {brewery.state} </td>
-                        <td className='rbc-table'>{brewery.website_url ?  <a href={brewery.website_url} target='_blank' className='RBC-atag'>Website</a> : 'No website available'}</td> 
+                        <td className='rbc-table'>{brewery.website_url ?  <a href={brewery.website_url} target="_blank"><img src="https://i.imgur.com/JLg6QnE.png" alt="" /></a> : 'No website available'}</td> 
+                        
                         <td>
                             <form onSubmit={handleSubmit}>
                                 <input type='hidden' 
