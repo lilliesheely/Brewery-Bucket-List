@@ -21,7 +21,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(require('./config/checkToken'));
 
 // Put all API routes here (before the catch-all)
-app.use('/api/users', require('./routes/api/users'));
 // Protect the api routes below from anon users
 const ensureLoggedIn = require('./config/ensureLoggedIn');
 app.use('/api/users', require('./routes/api/users'));

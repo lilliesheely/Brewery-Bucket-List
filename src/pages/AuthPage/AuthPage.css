@@ -1,0 +1,22 @@
+.loginForm {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 200px ;
+    text-align: left;
+}
+
+.authFormContainer {
+    width: 300px;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.auth-btn {
+    color: rgb(194, 104, 84);
+
+}
+
+.authPage {
+    background-color: rgb(247, 222, 182);  
+}

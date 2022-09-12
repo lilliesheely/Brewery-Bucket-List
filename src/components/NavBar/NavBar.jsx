@@ -10,7 +10,7 @@ export default function NavBar({user, setUser}) {
   return (
     <nav className='navBar'>
       Welcome, {user.name}! &nbsp;
-      <Link to='/bucketlist'>BUCKETLIST</Link>
+      <Link to='/'>BUCKETLIST</Link>
       <div><img src="https://i.imgur.com/RBb82T2.gif" alt="" /></div>
       <Link to='/all'>BREWERIES</Link>
       <div>

@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
+import '../../pages/AuthPage/AuthPage.css'
 
 
 export default class SignUpForm extends Component {
@@ -36,10 +37,10 @@ export default class SignUpForm extends Component {
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (
-      <div>
+      <div className='authFormContainer'>
         <h1>Sign Up</h1>
         <div className="form-container">
-          <form autoComplete="off" onSubmit={this.handleSubmit}>
+          <form autoComplete="off" onSubmit={this.handleSubmit} className='loginForm'>
             <label>Name</label>
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
             <label>Email</label>
