@@ -1,8 +1,7 @@
-// LoginForm.jsx
 
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
-import '../../pages/AuthPage/AuthPage.css'
+import '../../pages/AuthPage/AuthPage.css';
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -29,17 +28,17 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div>
-        <h1>Log In</h1>
       <div className="authFormContainer">
         <form autoComplete="off" onSubmit={handleSubmit} className='loginForm'>
-          <label>Email</label>
+          <label className='authLabel'>Email</label>
           <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label>Password</label>
+          <label className='authLabel'>Password</label>
           <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
+          <button type="submit">Log In</button>
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>
     </div>
   );
 }
+

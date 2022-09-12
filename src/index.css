@@ -4,7 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #192841;
-  background-color: #fce183;  
+  background-color: white;
   position: relative; 
   min-height: 100vh;
 
@@ -83,8 +83,6 @@ code {
   text-align: center;
   font-size: 2vmin;
 }
-
-
 
 p.error-message {
   color: var(--orange);

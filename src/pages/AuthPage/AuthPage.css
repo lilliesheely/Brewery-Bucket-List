@@ -3,6 +3,8 @@
     justify-content: center;
     grid-template-columns: 100px 200px ;
     text-align: left;
+    gap: 10px;
+    
 }
 
 .authFormContainer {
@@ -10,13 +12,37 @@
     justify-content: center;
     align-content: center;
     margin: auto;
+    height: 100%;
+    padding-top: 20%;
+    
 }
 
 .auth-btn {
-    color: rgb(194, 104, 84);
-
+    color: rgb(194, 104, 84); 
+    background-color: transparent;
+    margin-top: -25px;
 }
 
 .authPage {
-    background-color: rgb(247, 222, 182);  
+    background-color: white; 
+    display: grid;
+    grid-template-columns: 300px 300px ; 
+    justify-content: center;
+    gap: 75px; 
+    align-items: center;
+    padding-top: 10%;
+}
+
+.authLabel {
+    color: rgb(194, 104, 84); 
+    font-family: 'Open Sans', sans-serif;
+}
+
+.authBTN, form:valid button[type="submit"]  {
+    background-color: navy;
+    
+}
+
+.auth-ptag {
+    margin-top: -35px;
 }
