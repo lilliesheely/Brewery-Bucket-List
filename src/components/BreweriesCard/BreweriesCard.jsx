@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './BreweriesCard.css'
 export default function BreweriesCard({ brewery, deleteBrewery }){
+  
     return (
         <>
             <div className='breweriesCardCom' >

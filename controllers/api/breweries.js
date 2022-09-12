@@ -1,10 +1,6 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
 const Brewery = require('../../models/brewery');
 var fetch = require('node-fetch')
-const api_url = 'https://api.openbrewerydb.org/breweries?by_city='
-const perCity= '&per_page=3'
-
 
 module.exports = {
     index, 
