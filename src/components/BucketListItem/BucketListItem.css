@@ -3,7 +3,7 @@
   grid-template-columns: 4vmin 10vmin 10vmin 10vmin 10vmin 6vmin;  
   align-items: center;
   gap: 0;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(194, 104, 84);;
 }
 
 #bll-btn::before {
@@ -33,7 +33,6 @@
 
 .bc-link {
   text-decoration: none;
-  color: red;
   border-radius: 0;
 }
 

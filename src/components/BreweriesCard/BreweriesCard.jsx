@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './BreweriesCard.css'
-export default function BreweriesCard({ brewery }){
+export default function BreweriesCard({ brewery, deleteBrewery }){
     return (
         <>
             <div className='breweriesCardCom' >
@@ -9,7 +9,7 @@ export default function BreweriesCard({ brewery }){
                         <tbody>
                             <tr className='breweriesCard'>
                                 
-                                <td className='breweriesTable'><img src="https://i.imgur.com/iazwr0w.png" alt="" /></td>
+                                <td className='breweriesTable'><img src='https://i.imgur.com/iazwr0w.png' alt='' /></td>
                                 <td className='breweriesTable'><b>{brewery.name}</b></td>
                                 <td className='breweriesTable'>{brewery.city}, {brewery.state}</td>
                                 <Link 
@@ -18,7 +18,7 @@ export default function BreweriesCard({ brewery }){
                                 >
                                     <td className='breweriesTable' id='bDetails'>Brewery<br />Details</td>   
                                 </Link>
-                                
+                                <td><button  className='breweriesTable' id='deleteBrewery' onClick={() => deleteBrewery(brewery._id)}>X</button></td>
                             </tr>
                         </tbody>
                     </table>
