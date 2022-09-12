@@ -6,6 +6,7 @@ import './BreweryDetailPage.css'
 
 export default function BreweryDetailPage({ breweries, setBreweries }){
     const { breweryName } = useParams()
+    if (!breweries.length) return null;
     let brewery = breweries.find(brew => brew.name === breweryName)
 
     async function handleAddReview(review) {
@@ -23,8 +24,8 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
                 <p className='bdp-ptag'>{brewery.address}</p> 
                 <p className='bdp-ptag'>{brewery.city}, {brewery.state}</p> 
                 {brewery.website ? <a href={brewery.website} target="_blank" rel="noreferrer">
-                    <img src="https://i.imgur.com/JLg6QnE.png" alt="" />
-                    </a> : ''}
+                    <img src="https://i.imgur.com/oQiXwLh.png" alt="" />
+                    </a> : 'no website found :( '}
                 <BreweryReviewForm  handleAddReview={handleAddReview} /> 
                 <BeerReviewsList breweries={breweries} /> 
             </div>

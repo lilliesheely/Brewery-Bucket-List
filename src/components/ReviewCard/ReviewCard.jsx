@@ -11,9 +11,7 @@ export default function ReviewCard({ review }) {
             reviewRating = '🍺🍺🍺🍺'; 
         } else if (review.rating === '5') {
             reviewRating = '🍺🍺🍺🍺🍺';
-        } else { 
-            reviewRating = 'No Rating'
-        };
+        }
     
     
     return (

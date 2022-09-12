@@ -19,8 +19,12 @@ export default function App() {
       const allBreweries = await breweriesAPI.getAll(); 
       setBreweries(allBreweries); 
     }
-    getBreweries(); 
-  }, []); 
+    if (user) {
+      getBreweries(); 
+    } else { 
+      setBreweries([])
+    }
+  }, [user]); 
  
   async function deleteBrewery(id) {
     const brewerySpots = await breweriesAPI.deleteBrewery(id);
