@@ -4,7 +4,9 @@
 }
 
 .rbc-btn:before {
-    content: ' ➕ '
+    content: ' + ';
+    color: navy; 
+    font-size: 25px;
 }
 
 
@@ -27,6 +29,7 @@
     align-content: center;
     align-items: center;
     padding: 5px; 
+    text-align: left;
 }
 
 .randomBreweriesCard {
@@ -40,4 +43,8 @@
 .randomBreweriesCardCom { 
     display: grid;
     justify-content: center;
+}
+
+#bn-API {
+    font-family: 'Shrikhand', cursive;
 }

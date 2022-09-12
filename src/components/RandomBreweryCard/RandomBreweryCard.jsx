@@ -9,6 +9,7 @@ export default function RandomBreweryCard({brewery, addBrewery}){
            address: evt.target[2].value,
            city: evt.target[3].value,
            state: evt.target[4].value,
+           website: evt.target[5].value,
            beenTo: false, 
         }
         console.log(newBrewery, "testing")
@@ -20,9 +21,9 @@ export default function RandomBreweryCard({brewery, addBrewery}){
             
                 <tbody>
                     <tr className='randomBreweriesCard'>
-                        <td className='rbc-table'><h4>{brewery.name}</h4></td>
+                        <td className='rbc-table' id='bn-API'><h4>{brewery.name}</h4></td>
                         <td className='rbc-table'>{brewery.city}, {brewery.state} </td>
-                        <td className='rbc-table'>{brewery.website_url ?  <a href={brewery.website_url} target="_blank"><img src="https://i.imgur.com/JLg6QnE.png" alt="" /></a> : 'No website available'}</td> 
+                        <td className='rbc-table'>{brewery.website_url ?  <a href={brewery.website_url} target="_blank" rel="noreferrer"><img src="https://i.imgur.com/oQiXwLh.png" alt="" /></a> : 'No website available'}</td> 
                         
                         <td>
                             <form onSubmit={handleSubmit}>
@@ -45,6 +46,10 @@ export default function RandomBreweryCard({brewery, addBrewery}){
                                 <input type='hidden' 
                                     value={brewery.state}
                                     name='state'
+                                />
+                                 <input type='hidden' 
+                                    value={brewery.website_url}
+                                    name='website'
                                 />
                                 <button className='rbc-btn' type='submit'></button> 
                             </form>

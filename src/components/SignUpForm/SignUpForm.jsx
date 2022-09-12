@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
-import '../../pages/AuthPage/AuthPage.css'
+import '../../pages/AuthPage/AuthPage.css';
 
 
 export default class SignUpForm extends Component {
@@ -41,13 +41,13 @@ export default class SignUpForm extends Component {
         <div className='form-container'>
           <form autoComplete='off' onSubmit={this.handleSubmit} className='loginForm'>
             <label className='authLabel'>Name</label>
-            <input type='text' name='name' value={this.state.name} onChange={this.handleChange} required />
+            <input type='text' name='name' value={this.state.name} onChange={this.handleChange}  className='auth-input' required />
             <label className='authLabel'>Email</label>
-            <input type='email' name='email' value={this.state.email} onChange={this.handleChange} required />
+            <input type='email' name='email' value={this.state.email} onChange={this.handleChange} className='auth-input'  required />
             <label className='authLabel'>Password</label>
-            <input type='password' name='password' value={this.state.password} onChange={this.handleChange} required />
+            <input type='password' name='password' value={this.state.password} onChange={this.handleChange}  className='auth-input' required />
             <label className='authLabel'>Confirm Password</label>
-            <input type='password' name='confirm' value={this.state.confirm} onChange={this.handleChange} required />
+            <input type='password' name='confirm' value={this.state.confirm} onChange={this.handleChange} className='auth-input'  required />
             <button className='authBTN' type='submit' disabled={disable}>Sign In</button>
           </form>
         </div>

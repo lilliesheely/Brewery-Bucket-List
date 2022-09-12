@@ -1,5 +1,7 @@
 .breweryByCity-btn:before {
-    content:' ➕ '
+    content: ' + ';
+    color: navy; 
+    font-size: 25px;
     
 }
 .breweryByCity-btn:hover:before {
@@ -22,6 +24,7 @@
        align-content: center;
        align-items: center;
        padding: 5px; 
+       text-align: left;
    }
    
 .gbbCard {
@@ -35,4 +38,8 @@
 .gbbCardCom { 
        display: grid;
        justify-content: center;
+}
+
+#api-breweryName {
+    font-family: 'Open Sans', sans-serif;
 }

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'; 
-import * as breweriesAPI from '../../utilities/breweries-api'
+import { useState } from 'react'; 
+import * as breweriesAPI from '../../utilities/breweries-api';
 import BucketListList   from '../../components/BucketListList/BucketListList';
 import BucketListForm   from '../../components/BucketListForm/BucketListForm';
 import GetRandomBrewery from '../../components/GetRandomBrewery/GetRandomBrewery';
@@ -45,8 +45,8 @@ export default function BucketListPage({breweries, setBreweries}) {
     <>
       <section className='bucketListPage'>
         <h1 className='bl-h1'>Find your favorite</h1>  
-        <img className='bl-gif' src='https://i.imgur.com/1gKm2cs.gif' alt='' />    
         <div></div>
+        <div className='bl-gif' > <img src="https://i.imgur.com/1gKm2cs.gif" alt="beer-gift" /></div>
         <div className='blf-div'>
           <BucketListForm  addBrewery={ addBrewery }/>
         </div>

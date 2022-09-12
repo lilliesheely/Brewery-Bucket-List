@@ -1,9 +1,11 @@
 .bll-table {
   display: grid;
-  grid-template-columns: 4vmin 10vmin 10vmin 10vmin 10vmin 6vmin;  
+  grid-template-columns: 6vmin 18vmin 18vmin 8vmin 10vmin 6vmin;  
   align-items: center;
   gap: 0;
-  border-bottom: 1px solid rgb(194, 104, 84);;
+  border-bottom: 1px solid rgb(194, 104, 84);
+  padding-bottom: 7px;
+  text-align: left;
 }
 
 #bll-btn::before {
@@ -44,7 +46,7 @@
   display: grid;
   align-items: center;
   margin: 3px;
-  color: navy;
+  color: rgb(194, 104, 84);
   border-radius: 0;
 }
 
