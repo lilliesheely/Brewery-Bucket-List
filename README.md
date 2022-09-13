@@ -10,9 +10,9 @@ From Here to Beer swap is an online application where beer enthusiasts can keep 
 | <h3 align="center">Sign Up</h3> | <img src="https://i.imgur.com/r2r5d5w.png" width="700"/> |
 | <h3 align="center">Log In</h3> | <img src="https://i.imgur.com/ZrH2K3O.png" width="700"/> |
 | <h3 align="center">BucketList Page</h3> | <img src="https://i.imgur.com/LHYIoL0.png" width="700"/> |
-| <h3 align="center">BucketList Page - add Breweries</h3> | <img src="https://i.imgur.com/kSeh72Z.png" width="700"/> |
-| <h3 align="center">Past Breweries Page</h3> | <img src="https://i.imgur.com/JL3tzdr.png" width="700"/> |
-| <h3 align="center">Brewery Detail Page</h3> | <img src="https://i.imgur.com/tzn4Ei4.png" width="700"/> |
+| <h3 align="center">BucketList Page - add Breweries</h3> | <img src="https://i.imgur.com/YYX7lZR.png" width="700"/> |
+| <h3 align="center">Past Breweries Page</h3> | <img src="https://i.imgur.com/CBQpNQg.png" width="700"/> |
+| <h3 align="center">Brewery Detail Page</h3> | <img src="https://i.imgur.com/SwLODAY.png" width="700"/> |
 </details>
 
 ## <div align="center">Built With</div>
