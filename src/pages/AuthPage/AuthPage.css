@@ -47,4 +47,5 @@
 .auth-input {
     font-family: 'Open Sans', sans-serif;
     color: black; 
+    background-image: none !important;
 }

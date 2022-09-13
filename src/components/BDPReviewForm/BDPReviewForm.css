@@ -30,6 +30,7 @@
 .reviewForminput {
     color: black;
     font-size: 15px; 
+    background-image: none !important;
 }
 
 .reviewFormLabel {

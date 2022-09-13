@@ -10,8 +10,8 @@ From Here to Beer swap is an online application where beer enthusiasts can keep 
 | <h3 align="center">Sign Up</h3> | <img src="https://i.imgur.com/qpOYWzA.png" width="700"/> |
 | <h3 align="center">Log In</h3> | <img src="https://i.imgur.com/qpOYWzA.png" width="700"/> |
 | <h3 align="center">BucketList Page</h3> | <img src="https://i.imgur.com/ZsHWagj.png" width="700"/> |
-| <h3 align="center">BucketList Page - add Breweries</h3> | <img src="https://i.imgur.com/EgADqEz.png" width="700"/> |
-| <h3 align="center">BucketList Page - add Get Breweries</h3> | <img src="https://i.imgur.com/ZMBwqkW.png" width="700"/> |
+| <h3 align="center">BucketList Page - add Breweries</h3> | <img src="https://i.imgur.com/8T8EXU4.png" width="700"/> |
+| <h3 align="center">BucketList Page - get Breweries</h3> | <img src="https://i.imgur.com/ZMBwqkW.png" width="700"/> |
 | <h3 align="center">Past Breweries Page</h3> | <img src="https://i.imgur.com/qW3RKhD.png" width="700"/> |
 | <h3 align="center">Brewery Detail Page</h3> | <img src="https://i.imgur.com/EgADqEz.png" width="700"/> |
 </details>
@@ -24,11 +24,12 @@ From Here to Beer swap is an online application where beer enthusiasts can keep 
 - MongoDB
 - Mongoose ODM
 - Express
+- React
 - Node.js
 - Heroku
 - GitHub
 - VS Code
-
+- Trello
 
 ## <div align="center">Getting Started</div>
 [Checkout From Here to Beer!](https://brewery-bucket-list.herokuapp.com/) <br>
