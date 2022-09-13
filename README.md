@@ -1,5 +1,5 @@
 # <div align="center">From Here to Beer</div>
-From Here to Beer swap is an online application where beer enthusiasts can keep track of all the breweries they have been to, wish to go to, and search for breweries they don't even know exist. 
+From Here to Beer swap is an online application where beer enthusiasts can keep track of all the breweries they have been to, wish to go to, and search for breweries they don't even know exist. Users can add breweries to their bucket list, they can search for breweries by city, or get a random brewery. Once they have visited the brewery, they can mark it and see it in their past breweries list. They can also write reviews about the beers they tried. 
 
 ## <div align="center">Screenshots</div>
 <details open>
@@ -7,12 +7,13 @@ From Here to Beer swap is an online application where beer enthusiasts can keep 
 
 | Description | Screenshot |
 |------------ | ------------|
-| <h3 align="center">Sign Up</h3> | <img src="https://i.imgur.com/r2r5d5w.png" width="700"/> |
-| <h3 align="center">Log In</h3> | <img src="https://i.imgur.com/ZrH2K3O.png" width="700"/> |
-| <h3 align="center">BucketList Page</h3> | <img src="https://i.imgur.com/LHYIoL0.png" width="700"/> |
-| <h3 align="center">BucketList Page - add Breweries</h3> | <img src="https://i.imgur.com/YYX7lZR.png" width="700"/> |
-| <h3 align="center">Past Breweries Page</h3> | <img src="https://i.imgur.com/CBQpNQg.png" width="700"/> |
-| <h3 align="center">Brewery Detail Page</h3> | <img src="https://i.imgur.com/SwLODAY.png" width="700"/> |
+| <h3 align="center">Sign Up</h3> | <img src="https://i.imgur.com/qpOYWzA.png" width="700"/> |
+| <h3 align="center">Log In</h3> | <img src="https://i.imgur.com/qpOYWzA.png" width="700"/> |
+| <h3 align="center">BucketList Page</h3> | <img src="https://i.imgur.com/ZsHWagj.png" width="700"/> |
+| <h3 align="center">BucketList Page - add Breweries</h3> | <img src="https://i.imgur.com/EgADqEz.png" width="700"/> |
+| <h3 align="center">BucketList Page - add Get Breweries</h3> | <img src="https://i.imgur.com/ZMBwqkW.png" width="700"/> |
+| <h3 align="center">Past Breweries Page</h3> | <img src="https://i.imgur.com/qW3RKhD.png" width="700"/> |
+| <h3 align="center">Brewery Detail Page</h3> | <img src="https://i.imgur.com/EgADqEz.png" width="700"/> |
 </details>
 
 ## <div align="center">Built With</div>
@@ -30,14 +31,15 @@ From Here to Beer swap is an online application where beer enthusiasts can keep 
 
 
 ## <div align="center">Getting Started</div>
-[Checkout From Here to Beer!!](https://brewery-bucket-list.herokuapp.com/) <br>
+[Checkout From Here to Beer!](https://brewery-bucket-list.herokuapp.com/) <br>
 <br>
 Click above to check out From Here to Beer! Sign up to be able to create a brewery bucket list of your dreams!
 
 ## <div align="center">Future Upgrades</div>
-- [ ] 
-- [ ] 
-- [ ]  
-- [ ] 
+- [ ] Update Bucket List breweries
+- [ ] Update Beer Reviews
+- [ ] Add Pictures to Reviews & Brewery Details Page for memories
+- [ ] Add general reviews about the Brewery establishment
+- [ ] Add map that shows pins of all the breweries that have been visited
 
 
