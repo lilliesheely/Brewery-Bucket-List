@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
-import './BreweriesCard.css'
-export default function BreweriesCard({ brewery, deleteBrewery }){
+import { Link } from 'react-router-dom';
+import './BreweriesList.css';
+
+export default function BreweriesList({ brewery, deleteBrewery }){
   
     return (
         <>
@@ -9,8 +10,7 @@ export default function BreweriesCard({ brewery, deleteBrewery }){
                     <table>
                         <tbody>
                             <tr className='breweriesCard'>
-                                
-                                <td className='breweriesTable'><img src='https://i.imgur.com/iazwr0w.png' alt='' /></td>
+                                <td className='breweriesTable'><img src='https://i.imgur.com/iazwr0w.png' alt='beer icon' /></td>
                                 <td className='breweriesTable' id='bDetails'><b>{brewery.name}</b></td>
                                 <td className='breweriesTable'>{brewery.city}, {brewery.state}</td>
                                 <Link 

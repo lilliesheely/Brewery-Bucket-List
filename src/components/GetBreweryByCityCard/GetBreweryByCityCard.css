@@ -1,0 +1,44 @@
+.breweryByCity-btn:before {
+    content: ' + ';
+    color: navy; 
+    font-size: 25px;
+    
+}
+.breweryByCity-btn:hover:before {
+    content:'Add to List';
+    color: black; 
+    text-align: center;
+    font-size: 12px;
+}
+
+.gbbc-table {
+    table-layout: fixed;
+    width: 100%;
+    height: 90px;
+    border-collapse: collapse;
+    margin: 5px;
+    color: navy;
+    display: flex; 
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5px; 
+    text-align: left;
+}
+   
+.gbbCard {
+    display: grid;
+    grid-template-columns: 15vmin 18vmin 9vmin 6vmin;  
+    border-bottom: 1px solid grey;
+    align-items: center;
+    gap: 1px;
+}
+   
+.gbbCardCom { 
+    display: grid;
+    justify-content: center;
+}
+
+#api-breweryName {
+    font-family: 'Open Sans', sans-serif;
+}

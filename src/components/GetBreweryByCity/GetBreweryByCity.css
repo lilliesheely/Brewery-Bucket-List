@@ -1,19 +1,19 @@
 .gbbc-form {
-    display: grid;
-    grid-template-columns: 180px 180px;
-    grid-auto-flow: column;
+  display: grid;
+  grid-template-columns: 180px 180px;
+  grid-auto-flow: column;
 }
   
 .gbbc-input {
-    width: 170px;
-    height: 45px;
-    color: grey; 
-  }
+  width: 170px;
+  height: 45px;
+  color: grey; 
+}
   
 .gbbc-btn {
-    background-color: navy;
-    width: 140px; 
-    height: 45px;
-    font-size: 15px; 
-    font-family: 'Open Sans', sans-serif;
-  }
+  background-color: navy;
+  width: 140px; 
+  height: 45px;
+  font-size: 15px; 
+  font-family: 'Open Sans', sans-serif;
+}

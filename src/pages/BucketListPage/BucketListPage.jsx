@@ -11,7 +11,6 @@ export default function BucketListPage({breweries, setBreweries}) {
   const [randomBrewery, setRandomBrewery] = useState([]); 
   const [breweryByCity, setBreweryByCity] = useState([]); 
 
-  console.log(breweryByCity, 'CITY')
   async function addBrewery(breweryFormData) {
     const brewery = await breweriesAPI.addOne(breweryFormData);
     setBreweries([...breweries, brewery]);
@@ -20,8 +19,6 @@ export default function BucketListPage({breweries, setBreweries}) {
   async function visitedBrewery(id) {
     const visited = await breweriesAPI.updateBeenTo(id);
     const updatedList = breweries.map(b => b._id === visited._id ? visited : b)
-    
-    console.log('visited', visited) 
     setBreweries(updatedList); 
   }
 
@@ -46,7 +43,7 @@ export default function BucketListPage({breweries, setBreweries}) {
       <section className='bucketListPage'>
         <h1 className='bl-h1'>Find your favorite</h1>  
         <div></div>
-        <div className='bl-gif' > <img src="https://i.imgur.com/1gKm2cs.gif" alt="beer-gift" /></div>
+        <div className='bl-gif' > <img src='https://i.imgur.com/1gKm2cs.gif' alt='beer-gif' /></div>
         <div className='blf-div'>
           <BucketListForm  addBrewery={ addBrewery }/>
         </div>

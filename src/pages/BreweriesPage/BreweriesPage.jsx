@@ -1,8 +1,8 @@
-import BreweriesCard from '../../components/BreweriesCard/BreweriesCard'
-import './BreweriesPage.css'
+import BreweriesList from '../../components/BreweriesList/BreweriesList';
+import './BreweriesPage.css';
 
 export default function BreweriesPage({ breweries, deleteBrewery }){ 
-    const breweryInd = breweries.map((b, idx) => (<BreweriesCard key ={idx} brewery={b} deleteBrewery={deleteBrewery}/> ))
+    const breweryInd = breweries.map((b, idx) => (<BreweriesList key ={idx} brewery={b} deleteBrewery={deleteBrewery}/> ))
     return (
         <>
         <div className='bp-container'>

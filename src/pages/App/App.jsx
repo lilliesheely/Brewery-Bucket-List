@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
-import * as breweriesAPI from '../../utilities/breweries-api'
+import * as breweriesAPI from '../../utilities/breweries-api';
 import AuthPage from '../AuthPage/AuthPage';
 import BucketListPage from '../BucketListPage/BucketListPage';
-import BreweryDetailPage from '../BreweryDetailPage/BreweryDetailPage'
+import BreweryDetailPage from '../BreweryDetailPage/BreweryDetailPage';
 import BreweriesPage from '../BreweriesPage/BreweriesPage';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';

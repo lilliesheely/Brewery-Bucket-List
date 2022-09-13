@@ -1,6 +1,6 @@
-import './RandomBreweryCard.css'
+import './GetRandomBreweryCard.css';
 
-export default function RandomBreweryCard({brewery, addBrewery}){
+export default function GetRandomBreweryCard({brewery, addBrewery}){
    function handleSubmit(evt) {
        evt.preventDefault(); 
        const newBrewery = {
@@ -12,7 +12,6 @@ export default function RandomBreweryCard({brewery, addBrewery}){
            website: evt.target[5].value,
            beenTo: false, 
         }
-        console.log(newBrewery, "testing")
         addBrewery(newBrewery); 
    }
     return(
@@ -23,8 +22,7 @@ export default function RandomBreweryCard({brewery, addBrewery}){
                     <tr className='randomBreweriesCard'>
                         <td className='rbc-table' id='bn-API'><h4>{brewery.name}</h4></td>
                         <td className='rbc-table'>{brewery.city}, {brewery.state} </td>
-                        <td className='rbc-table'>{brewery.website_url ?  <a href={brewery.website_url} target="_blank" rel="noreferrer"><img src="https://i.imgur.com/oQiXwLh.png" alt="" /></a> : 'No website available'}</td> 
-                        
+                        <td className='rbc-table'>{brewery.website_url ?  <a href={brewery.website_url} target="_blank" rel="noreferrer"><img src="https://i.imgur.com/oQiXwLh.png" alt="website icon" /></a> : 'No website available'}</td> 
                         <td>
                             <form onSubmit={handleSubmit}>
                                 <input type='hidden' 
@@ -57,8 +55,6 @@ export default function RandomBreweryCard({brewery, addBrewery}){
                     </tr>
                 </tbody>
             </table>
-
-            
         </div>
     )
 }

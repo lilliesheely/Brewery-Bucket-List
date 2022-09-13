@@ -1,6 +1,6 @@
 import { useState } from 'react'; 
-import BreweryByCityCard from '../BreweryByCityCard/BreweryByCityCard';
-import './GetBreweryByCity.css'
+import GetBreweryByCityCard from '../GetBreweryByCityCard/GetBreweryByCityCard';
+import './GetBreweryByCity.css';
 
 export default function GetBreweryByCity({ getBreweryByCity, breweryByCity, addBrewery }) {
     const [newCity, setNewCity] = useState('')
@@ -14,7 +14,8 @@ export default function GetBreweryByCity({ getBreweryByCity, breweryByCity, addB
     async function handleChange(evt) {
         setNewCity(evt.target.value)
     }
-    const cityBreweries = breweryByCity.map((b, idx) => <BreweryByCityCard brews={b} key={idx} addBrewery={addBrewery}/> )
+    const cityBreweries = breweryByCity.map((b, idx) => <GetBreweryByCityCard brews={b} key={idx} addBrewery={addBrewery}/> )
+    
     return (
         <>
         <form onSubmit={handleSubmit} className='gbbc-form'>

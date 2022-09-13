@@ -1,5 +1,5 @@
 import { useState } from 'react'; 
-import './BucketListForm.css'
+import './BucketListForm.css';
 
 export default function BucketListForm({ addBrewery }) { 
     const [newBrewery, setNewBrewery] = useState ({

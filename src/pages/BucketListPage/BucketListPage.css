@@ -10,22 +10,10 @@
     padding-bottom: 30px; 
 }
 
-/* .backgroundDiv {
-    background-image: url('https://i.imgur.com/eLTj2do.png');
-    background-repeat: no-repeat;
-    background-size: contain;  
-    margin-left: -50vh;
-    height: 900vmin;
-    background-color: white;
-} */
-
 .bl-gif {
     margin-top: 70vmin;
     margin-left: -110vmin;
     margin-right: -30vmin;
-    /* background-image: url('https://i.imgur.com/1gKm2cs.gif');
-    background-repeat: no-repeat;
-    background-size: contain;   */
 }
 .blf-div {
     margin-bottom: 15px;
@@ -34,7 +22,6 @@
 .bl-h2 {
     margin-bottom: -5px;
     font-family: 'Shrikhand', cursive;
-    /* margin-top: 95vh;  */
     color: navy;
 }
 

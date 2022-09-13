@@ -1,8 +1,8 @@
 .breweriesCardCom {
     display: grid;
     justify-content: center;
-    
 }
+
 .bc-link {
     text-decoration: none;
     color: red;
@@ -29,7 +29,6 @@
     align-content: center;
     align-items: center;
     padding-top: 10px;
-    
 }
 
 #bDetails {

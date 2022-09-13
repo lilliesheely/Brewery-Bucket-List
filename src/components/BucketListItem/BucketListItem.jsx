@@ -12,7 +12,7 @@ export default function BucketListItem({ brewery, visitedBrewery, deleteBrewery 
                        
                             <td className="breweriesListTable" id='bDetails'><h4>{brewery.name}</h4></td>
                             <td className="breweriesListTable">{brewery.city}, {brewery.state}</td>
-                            <td>{brewery.website ? <a href={brewery.website} target="_blank" rel="noreferrer"><img src="https://i.imgur.com/H6KcSrT.png" alt="" /></a> : '' }</td>
+                            <td>{brewery.website ? <a href={brewery.website} target="_blank" rel="noreferrer"><img src="https://i.imgur.com/H6KcSrT.png" alt="website icon" /></a> : '' }</td>
                             <Link 
                             to={`/${brewery.name}`} 
                             className='bl-link'

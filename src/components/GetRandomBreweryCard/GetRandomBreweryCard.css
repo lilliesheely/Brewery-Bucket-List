@@ -9,7 +9,6 @@
     font-size: 25px;
 }
 
-
 .rbc-btn:hover:before {
     content:'Add to List';
     color: black; 

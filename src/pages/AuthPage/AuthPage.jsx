@@ -17,7 +17,7 @@ export default function AuthPage({setUser}) {
       </button>
       </div>
       <div>
-        <img src="https://i.imgur.com/cM6S0lc.png" alt="" />
+        <img src='https://i.imgur.com/cM6S0lc.png' alt='logo' />
       </div>
     </main>
   );

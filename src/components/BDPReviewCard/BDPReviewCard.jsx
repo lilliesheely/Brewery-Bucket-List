@@ -1,4 +1,5 @@
-import './ReviewCard.css'
+import './BDPReviewCard.css';
+
 export default function ReviewCard({ review }) {
         let reviewRating; 
         if (review.rating === '1') {
@@ -12,7 +13,6 @@ export default function ReviewCard({ review }) {
         } else if (review.rating === '5') {
             reviewRating = '🍺🍺🍺🍺🍺';
         }
-    
     
     return (
         <>

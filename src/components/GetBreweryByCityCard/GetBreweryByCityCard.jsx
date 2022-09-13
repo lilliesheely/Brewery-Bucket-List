@@ -1,4 +1,5 @@
-import './BreweryByCityCard.css'
+import './GetBreweryByCityCard.css';
+
 export default function BreweryByCityCard({ brews, addBrewery }){
     function handleSubmit(evt) {
         evt.preventDefault(); 
@@ -11,10 +12,8 @@ export default function BreweryByCityCard({ brews, addBrewery }){
             website: evt.target[5].value,
             beenTo: false, 
          }
-         console.log(newBrewery, "testing")
          addBrewery(newBrewery); 
     }
-
 
     return (
         <>
@@ -25,7 +24,7 @@ export default function BreweryByCityCard({ brews, addBrewery }){
                     <tr className='gbbCard'>
                         <td className='gbbc-table' id='bn-API'><h4>{brews.name}</h4> </td>  
                         <td className='gbbc-table'>{brews.city}, {brews.state}</td>
-                        <td className='gbbc-table'>{brews.website_url ?  <a href={brews.website_url} target="_blank" rel="noreferrer" ><img src="https://i.imgur.com/oQiXwLh.png" alt="" /></a> : 'No website available'}</td> 
+                        <td className='gbbc-table'>{brews.website_url ?  <a href={brews.website_url} target="_blank" rel="noreferrer" ><img src="https://i.imgur.com/oQiXwLh.png" alt="website icon" /></a> : 'No website available'}</td> 
                         <td className='gbbc-table'>
                             <form onSubmit={handleSubmit}>
                                 <input type='hidden' 
@@ -58,8 +57,6 @@ export default function BreweryByCityCard({ brews, addBrewery }){
                     </tr>
                 </tbody>
             </table>
-        
-        
         </>
     )
 }
