@@ -9,13 +9,11 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
     if (!breweries.length) return null;
     let brewery = breweries.find(brew => brew.name === breweryName)
     
-    
     async function handleAddReview(review) {
         const newReview = await reviewsAPI.addReview(brewery._id, review);
         const findReviews = breweries.map(b => b._id === newReview._id ? newReview : b)
         setBreweries(findReviews);   
     }
-    let breweryMap = breweries.map((b, idx) => ( <BDPReviewsList key={idx} brewery={b} /> ))
 
     return (
         <>
@@ -29,7 +27,7 @@ export default function BreweryDetailPage({ breweries, setBreweries }){
                     <img src='https://i.imgur.com/oQiXwLh.png' alt='logo' />
                     </a> : 'no website found :( '}
                 <BDPReviewForm  handleAddReview={handleAddReview} /> 
-                {breweryMap}
+                <BDPReviewsList brewery={brewery} />
             </div>
         </section>
        </>

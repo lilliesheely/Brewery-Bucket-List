@@ -1,6 +1,6 @@
 import './BDPReviewCard.css';
 
-export default function ReviewCard({ review }) {
+export default function BDPReviewCard({ review }) {
         let reviewRating; 
         if (review.rating === '1') {
             reviewRating = '🍺';
@@ -13,7 +13,7 @@ export default function ReviewCard({ review }) {
         } else if (review.rating === '5') {
             reviewRating = '🍺🍺🍺🍺🍺';
         }
-    
+        console.log(review, 'single review')
     return (
         <>
         <div className='BeerReviewCard'>
