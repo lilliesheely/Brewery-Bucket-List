@@ -1,5 +1,5 @@
 # <div align="center">🍻From Here to Beer🍻</div>
-From Here to Beer swap is an online application where beer enthusiasts can keep track of all the breweries they have been to, wish to go to, and search for breweries they don't even know exist. Users can add breweries to their bucket list manually, or with the use of the [Open Brewery API](https://www.openbrewerydb.org/documentation),  they can search for breweries by city, or get a random brewery. Once they have visited the brewery, they can mark it and see it in their past breweries list. They can also write reviews about the beers they tried. 
+From Here to Beer  is an online application where beer enthusiasts can keep track of all the breweries they have been to, wish to go to, and search for breweries they don't even know exist. Users can add breweries to their bucket list manually, or with the use of the [Open Brewery API](https://www.openbrewerydb.org/documentation),  they can search for breweries by city or get a random brewery. Once they have visited the brewery, they can mark check it off their bucket list and see it in their past breweries list. They can also write reviews about the beers they tried while there. 
 
 ## <div align="center">Screenshots</div>
 <details open>
